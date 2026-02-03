@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <Services />
       <Reviews />
+      <Services />
       <BeforeAfter />
       <ProcessSection />
       <MapSection />
