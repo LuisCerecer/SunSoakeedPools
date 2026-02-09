@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -36,6 +37,7 @@ export default function App() {
     <NavigationContext.Provider value={{ currentPage, navigate }}>
       <Header />
       {renderPage()}
+      <Analytics />
     </NavigationContext.Provider>
   );
 }
