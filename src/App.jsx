@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -38,6 +39,7 @@ export default function App() {
       <Header />
       {renderPage()}
       <Analytics />
+      <SpeedInsights />
     </NavigationContext.Provider>
   );
 }
