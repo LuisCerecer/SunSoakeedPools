@@ -38,8 +38,8 @@ export default function App() {
     <NavigationContext.Provider value={{ currentPage, navigate }}>
       <Header />
       {renderPage()}
-      <Analytics />
-      <SpeedInsights />
+      {import.meta.env.PROD && <Analytics />}
+      {import.meta.env.PROD && <SpeedInsights />}
     </NavigationContext.Provider>
   );
 }
