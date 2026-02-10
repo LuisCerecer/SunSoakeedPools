@@ -38,4 +38,21 @@ body {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
+
+  .hero-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .hero-content > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content > div:last-child {
+    width: 100% !important;
+    min-width: unset !important;
+    flex: 1 1 100% !important;
+  }
 }
