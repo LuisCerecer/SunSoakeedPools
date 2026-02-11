@@ -26,14 +26,14 @@ function ServiceCard({ title, image }) {
       transition: 'transform 0.3s ease, box-shadow 0.3s ease',
       aspectRatio: '16 / 12'
     }}
-    onMouseEnter={(e) => {
-      e.currentTarget.style.transform = 'translateY(-4px)';
-      e.currentTarget.style.boxShadow = '0 8px 30px rgba(8, 145, 178, 0.25)';
-    }}
-    onMouseLeave={(e) => {
-      e.currentTarget.style.transform = 'translateY(0)';
-      e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
-    }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = 'translateY(-4px)';
+        e.currentTarget.style.boxShadow = '0 8px 30px rgba(8, 145, 178, 0.25)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = 'translateY(0)';
+        e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
+      }}
     >
       <img
         src={image}
@@ -70,7 +70,7 @@ function ServiceCard({ title, image }) {
 
 export default function Services() {
   return (
-    <section style={{
+    <section id="services" style={{
       padding: '5rem 2rem',
       backgroundColor: '#f8fafc',
       borderTop: '1px solid #e5e7eb',
