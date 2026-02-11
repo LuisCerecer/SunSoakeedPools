@@ -25,7 +25,7 @@ export default function MapSection() {
           marginBottom: '2rem',
           fontFamily: "'Montserrat', sans-serif"
         }}>
-          Proudly serving Irvine and surrounding cities
+          Proudly serving Orange County and surrounding cities
         </h2>
 
         <div style={{
@@ -36,7 +36,7 @@ export default function MapSection() {
           border: '2px solid #e5e7eb'
         }}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106235.6343148877!2d-117.85578721746072!3d33.68659660392272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdd0e689140e3%3A0xa77ab575604a9a39!2sIrvine%2C%20CA!5e0!3m2!1sen!2sus!4v1769451329131!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983222.6970363811!2d-118.43981641114867!3d33.63906386446969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc925c54d5f7cf%3A0xdea6c3618ff0d607!2sOrange%20County%2C%20CA!5e1!3m2!1sen!2sus!4v1770845268496!5m2!1sen!2sus"
             width="100%"
             height="400"
             style={{
