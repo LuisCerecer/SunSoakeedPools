@@ -150,7 +150,7 @@ export default function Hero() {
               letterSpacing: '-0.02em',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Orange County Professional Pool Services
+              Weekly Pool Service in Lake Forest &amp; South Orange County
             </h1>
 
             <p style={{
@@ -162,9 +162,9 @@ export default function Hero() {
               maxWidth: '540px',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Operated by certified pool professional with exceptional service.
+              Consistent weekly care that keeps your pool looking beautiful
               <br />
-              Crystal-clear water with consistent weekly maintenance, insured service you can trust.
+              Every visit includes proper skimming, brushing, and balanced chemistry.
             </p>
 
             <div style={{
@@ -198,11 +198,34 @@ export default function Hero() {
                 </svg>
                 (949) 736-2671
               </a>
+
+              {/* Secondary CTA — Get a Free Quote */}
+              <a
+                href="#hero-quote-form"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: '#fff',
+                  fontSize: 'clamp(0.9rem, 2vw, 1.05rem)',
+                  fontWeight: '600',
+                  padding: '0.9rem 2rem',
+                  border: '2px solid rgba(255, 255, 255, 0.6)',
+                  borderRadius: '6px',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  fontFamily: "'Montserrat', sans-serif"
+                }}
+              >
+                Get a Free Quote
+              </a>
             </div>
           </div>
 
           {/* Right side — Quote Form */}
-          <div style={{
+          <div id="hero-quote-form" style={{
             flex: '0 1 420px',
             minWidth: '300px',
             backgroundColor: '#fff',
@@ -218,7 +241,7 @@ export default function Hero() {
               textAlign: 'center',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Get a Free Quote Now!
+              Request a Free Quote
             </h2>
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
@@ -410,7 +433,7 @@ export default function Hero() {
                   marginTop: '0.25rem'
                 }}
               >
-                {isSubmitting ? 'Sending...' : 'Send'}
+                {isSubmitting ? 'Sending...' : 'Request Quote'}
               </button>
             </form>
           </div>

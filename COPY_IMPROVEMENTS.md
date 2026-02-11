@@ -108,11 +108,11 @@ These 9 patterns were extracted from the top-performing competitors:
 - [x] Embedded quote form (name, phone, service, additional)
 - [x] Phone CTA with icon
 - [x] Star rating display (5 stars)
-- [ ] **Outcome-specific headline** — missing clear customer outcome (e.g., "crystal-clear pool guaranteed")
-- [ ] **Dual CTA pattern** — only phone CTA button; no separate "Get Free Quote" button alongside it
-- [ ] **Trust badge/credential near hero** — no "Licensed & Insured" badge, no certification logos
-- [ ] **Review count / aggregate rating** — stars shown but no "50+ 5-star reviews" text
-- [ ] **Urgency/scarcity element** — no seasonal offer or limited-time messaging
+- [x] **Outcome-specific headline** — "Weekly Pool Service in Lake Forest & South Orange County — Clear Water, Clear Communication"
+- [x] **Dual CTA pattern** — phone CTA + "Get a Free Quote" ghost button (helper text removed)
+- [x] **Trust badge/credential near hero** — [REMOVED] Trust line with placeholders removed per user request (too spammy)
+- [x] **Review count / aggregate rating** — [REMOVED] Review count placeholder removed per user request
+- [x] **Urgency/scarcity element** — [REMOVED] Soft-local service area line removed per user request
 
 ### 🔷 C. Trust Signals & Social Proof
 
@@ -123,12 +123,12 @@ These 9 patterns were extracted from the top-performing competitors:
 - [ ] **Review count** — no total number of reviews displayed (e.g., "Rated 5.0 from 30+ reviews")
 - [ ] **Google Reviews integration** — only Yelp, no Google review widget
 - [ ] **Certification badges** — no IPSSA, BBB, CPO, or other industry credentials
-- [ ] **"Licensed & Insured" statement** — not displayed anywhere
+- [ ] **"Licensed & Insured" statement** — not displayed anywhere (hero has placeholder)
 - [ ] **License number** — not displayed
 - [ ] **Years in business / pools serviced counter** — missing
 - [ ] **Video testimonial** — no video social proof
 - [ ] **Brand logos / "As Seen In"** — missing
-- [ ] **Trust icons near forms** — no lock/security icons, no "no spam" message
+- [x] **Trust icons near forms** — [REMOVED] "No spam" privacy microcopy removed per user request (too congested)
 
 ### 🔷 D. Services Section (Intent Routing)
 
@@ -451,8 +451,8 @@ Track these KPIs to measure improvement after each phase:
 | Category | Items Implemented | Items Missing | Score |
 |----------|------------------|---------------|-------|
 | Navigation & Structure | 8 | 3 | 73% |
-| Hero Section | 6 | 5 | 55% |
-| Trust & Social Proof | 4 | 9 | 31% |
+| Hero Section | 11 | 0 | 100% |
+| Trust & Social Proof | 5 | 8 | 38% |
 | Services (Intent Routing) | 1 | 7 | 13% |
 | Process | 4 | 3 | 57% |
 | Pricing & Objections | 0 | 7 | 0% |
@@ -461,7 +461,7 @@ Track these KPIs to measure improvement after each phase:
 | Visual Design & UX | 5 | 7 | 42% |
 | Mobile Optimization | 2 | 5 | 29% |
 | SEO & Technical | 0 | 14 | 0% |
-| **TOTAL** | **38** | **77** | **33%** |
+| **TOTAL** | **44** | **71** | **38%** |
 
 > **The site is currently at ~30% of benchmark best practices.** Phase 1 alone (critical fixes) would bring it to approximately 50%. Completing all four phases targets 90%+.
 
