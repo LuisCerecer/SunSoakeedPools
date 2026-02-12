@@ -1,32 +1,14 @@
 import React from 'react';
+import ProcessSection from '../components/ProcessSection';
+import ContactFormSection from '../components/ContactFormSection';
+import Footer from '../components/Footer';
 
 export default function Process() {
   return (
-    <div style={{
-      minHeight: '100vh',
-      paddingTop: '120px',
-      padding: '120px 2rem 4rem'
-    }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto'
-      }}>
-        <h1 style={{
-          fontSize: '3rem',
-          fontWeight: '700',
-          color: '#1f2937',
-          marginBottom: '2rem'
-        }}>
-          Our Process
-        </h1>
-        <p style={{
-          fontSize: '1.125rem',
-          color: '#6b7280',
-          lineHeight: '1.8'
-        }}>
-          Content coming soon...
-        </p>
-      </div>
+    <div style={{ paddingTop: '100px' }}>
+      <ProcessSection />
+      <ContactFormSection />
+      <Footer />
     </div>
   );
 }

@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from '../App';
 
-/* --- Breadcrumb labels for inner pages --- */
-const PAGE_LABELS = {
-  about: 'About',
-  process: 'Process',
-  contact: 'Contact',
-};
 
 export default function Header() {
   const { currentPage, navigate } = useNavigation();
@@ -239,38 +233,6 @@ export default function Header() {
         )}
       </header>
 
-      {/* Breadcrumb for inner pages */}
-      {PAGE_LABELS[currentPage] && (
-        <nav
-          aria-label="Breadcrumb"
-          style={{
-            maxWidth: '1400px',
-            margin: '0 auto',
-            padding: '0.75rem 2rem',
-            paddingTop: 'calc(70px + 2rem + 0.75rem)', /* offset for fixed header */
-            fontSize: '0.85rem',
-            fontFamily: "'Montserrat', sans-serif",
-            color: '#6b7280'
-          }}
-        >
-          <button
-            onClick={() => handleNavClick('home')}
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              color: '#0891b2',
-              fontFamily: 'inherit',
-              fontSize: 'inherit',
-              padding: 0
-            }}
-          >
-            Home
-          </button>
-          <span style={{ margin: '0 0.5rem' }}>/</span>
-          <span>{PAGE_LABELS[currentPage]}</span>
-        </nav>
-      )}
     </>
   );
 }

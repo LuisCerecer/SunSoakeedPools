@@ -50,7 +50,7 @@ export default function Reviews() {
           textAlign: 'center',
           fontFamily: "'Montserrat', sans-serif"
         }}>
-          Real reviews from real customers
+          They gave us their trust - we gave them results
         </p>
 
         <div style={{

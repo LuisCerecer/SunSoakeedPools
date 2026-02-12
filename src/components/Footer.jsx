@@ -114,12 +114,12 @@ export default function Footer() {
             lineHeight: '1.8',
             color: '#d1d5db'
           }}>
-            <div>Monday: 8:00am - 8:00pm</div>
-            <div>Tuesday: 8:00am - 8:00pm</div>
-            <div>Wednesday: 8:00am - 8:00pm</div>
-            <div>Thursday: 8:00am - 8:00pm</div>
-            <div>Friday: 8:00am - 8:00pm</div>
-            <div>Saturday: 8:00am - 8:00pm</div>
+            <div>Monday: 8:30am - 4:00pm</div>
+            <div>Tuesday: 8:30am - 4:00pm</div>
+            <div>Wednesday: 8:30am - 4:00pm</div>
+            <div>Thursday: 8:30am - 4:00pm</div>
+            <div>Friday: 8:30am - 4:00pm</div>
+            <div>Saturday: 8:30am - 4:00pm</div>
             <div style={{ color: '#9ca3af', marginTop: '0.5rem' }}>Sunday: Closed</div>
           </div>
         </div>
