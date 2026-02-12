@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
+import ContactFormSection from '../components/ContactFormSection';
 
 const faqData = [
   {
@@ -289,8 +290,90 @@ export default function About() {
             </div>
           </div>
 
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '1.25rem',
+            flexWrap: 'wrap'
+          }}>
+            <a
+              href="tel:9497362671"
+              style={{
+                backgroundColor: '#5dd3d3',
+                color: '#1f2937',
+                padding: '1rem 2.25rem',
+                borderRadius: '50px',
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                transition: 'all 0.3s ease',
+                border: '2px solid #5dd3d3',
+                fontFamily: "'Montserrat', sans-serif",
+                boxShadow: '0 4px 12px rgba(93, 211, 211, 0.3)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#4bc2c2';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(93, 211, 211, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#5dd3d3';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(93, 211, 211, 0.3)';
+              }}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              (949) 736-2671
+            </a>
+
+            <a
+              href="/contact"
+              style={{
+                backgroundColor: 'transparent',
+                color: '#1f2937',
+                padding: '1rem 2.25rem',
+                borderRadius: '50px',
+                fontSize: '1.1rem',
+                fontWeight: '700',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                transition: 'all 0.3s ease',
+                border: '2px solid #1f2937',
+                fontFamily: "'Montserrat', sans-serif"
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#1f2937';
+                e.currentTarget.style.color = '#fff';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(31, 41, 55, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.color = '#1f2937';
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="12" y1="18" x2="12" y2="12" />
+                <line x1="9" y1="15" x2="15" y2="15" />
+              </svg>
+              FREE QUOTE
+            </a>
+          </div>
+
         </div>
       </div>
+      <ContactFormSection />
       <Footer />
     </>
   );
