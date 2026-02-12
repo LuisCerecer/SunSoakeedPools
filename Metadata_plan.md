@@ -2,7 +2,7 @@
 
 ## 1. Executive summary — checklist
 
-- [ ] Confirm there is **no `Bolt` / `Bolt.new` / `meta name="generator"`** in the live production HTML (even though the repo and `dist/index.html` are clean).
+- [x] Confirm there is **no `Bolt` / `Bolt.new` / `meta name="generator"`** in the live production HTML (even though the repo and `dist/index.html` are clean).
 - [ ] Document that the only current metadata in `index.html` / `dist/index.html` is `<title>Welcome</title>` plus basic charset/viewport tags.
 - [ ] Acknowledge that any “Bolt.new” still visible in search/social is likely from an **external layer** (hosting, proxy, legacy generator, or cached HTML).
 - [ ] Confirm that all logical routes (Home, About, Process, Contact, RequestQuote) are rendered from a **single HTML shell** (`index.html` → `dist/index.html`) via the SPA.
@@ -10,12 +10,12 @@
 
 ## 2. Current-state metadata inventory — checklist
 
-- [ ] Verify current `<title>` in `index.html` / `dist/index.html` is `Welcome` and log it as **generic / non-brand / non-keyword**.
-- [ ] Confirm **no `<meta name="description">`** exists in `index.html` or `dist/index.html`.
+- [x] Verify current `<title>` in `index.html` / `dist/index.html` is `Welcome` and log it as **generic / non-brand / non-keyword**.
+- [x] Confirm **no `<meta name="description">`** exists in `index.html` or `dist/index.html`.
 - [ ] Confirm **no `<link rel="canonical">`** exists anywhere in the repo.
-- [ ] Confirm **no `<meta name="robots">`** directives exist for any page.
-- [ ] Confirm there is **no `/robots.txt`** file in the repo.
-- [ ] Confirm there is **no `sitemap.xml`** file in the repo.
+- [x] Confirm **no `<meta name="robots">`** directives exist for any page.
+- [x] Confirm there is **no `/robots.txt`** file in the repo.
+- [x] Confirm there is **no `sitemap.xml`** file in the repo.
 - [ ] Confirm there is **no explicit site name signal** (no brand in `<title>` pattern, no `WebSite.name` in structured data).
 - [ ] Confirm there are **no favicon tags or favicon files** referenced in the repo.
 - [ ] Confirm there are **no Open Graph tags** (`og:title`, `og:description`, `og:site_name`, `og:image`, etc.) in `index.html` / `dist/index.html`.
@@ -29,15 +29,15 @@
 
 ### 3.1 Site name
 
-- [ ] Approve **primary site name**: `SunSoakedPools` (from `COPY_IMPROVEMENTS.md`).
-- [ ] Approve **display / marketing name**: e.g., **“OC Sun Soaked Pools”** (**needs owner input**).
+- [x] Approve **primary site name**: `SunSoakedPools` (from `COPY_IMPROVEMENTS.md`).
+- [x] Approve **display / marketing name**: e.g., **“OC Sun Soaked Pools”** (**needs owner input**).
 - [ ] Decide any **alternate names** (e.g., `Sun Soaked Pools`, `OC Sun Soaked Pools LLC`).
 - [ ] Confirm the **exact string** to use for `og:site_name` and JSON-LD `WebSite.name`.
 
 ### 3.2 Title strategy
 
-- [ ] Approve a **global title template** (best-practice, no case study cited): `Primary keyword + service + location | OC Sun Soaked Pools`.
-- [ ] Approve homepage title candidate: `Professional Pool Service in Orange County | OC Sun Soaked Pools` (**needs owner input**).
+- [x] Approve a **global title template** (best-practice, no case study cited): `Primary keyword + service + location | OC Sun Soaked Pools`.
+- [x] Approve homepage title candidate: `Professional Pool Service in Orange County | OC Sun Soaked Pools` (**needs owner input**).
 - [ ] Approve About page title candidate: `About OC Sun Soaked Pools | Certified Pool Service in Orange County` (**needs owner input**).
 - [ ] Approve Process page title candidate: `How Our Pool Service Works | OC Sun Soaked Pools` (**needs owner input**).
 - [ ] Approve Contact page title candidate: `Contact OC Sun Soaked Pools | Free Pool Service Quote` (**needs owner input**).
@@ -46,9 +46,9 @@
 
 ### 3.3 Meta description strategy
 
-- [ ] Approve a **global description pattern** (best-practice, no case study cited): 1–2 sentences, ~120–160 chars, including service, location, differentiators, and CTA.
+- [x] Approve a **global description pattern** (best-practice, no case study cited): 1–2 sentences, ~120–160 chars, including service, location, differentiators, and CTA.
 - [ ] Approve homepage meta description candidate (based on existing copy):  
-  - [ ] `Certified pool maintenance, cleaning & repair in Orange County. Weekly service with chemical reports. Licensed & insured. Get a free quote — (949) 736-2671.` (**needs owner input / legal review**).
+  - [x] `Certified pool maintenance, cleaning & repair in Orange County. Weekly service with chemical reports. Licensed & insured. Get a free quote — (949) 736-2671.` (**needs owner input / legal review**).
 - [ ] Draft and approve **About** page description aligned with About content (**needs owner input**).
 - [ ] Draft and approve **Process** page description aligned with how-it-works content (**needs owner input**).
 - [ ] Draft and approve **Contact** page description focused on getting in touch / quote (**needs owner input**).
@@ -56,14 +56,14 @@
 
 ### 3.4 Canonical URL rules
 
-- [ ] Decide the **canonical domain** (e.g., `https://ocsunsoakedpools.com`) (**needs owner input**).
+- [x] Decide the **canonical domain** (e.g., `https://ocsunsoakedpools.com`) (**needs owner input**).
 - [ ] Document whether the **canonical host** should include `www` or not (`https://www.example.com` vs `https://example.com`).
 - [ ] Define a rule that each primary page has a **self-referencing canonical** URL.
 - [ ] Decide how to handle any **duplicate URLs or query-parameter variants** in future (best-practice, no case study cited, based on \([g-canon]\)).
 
 ### 3.5 Open Graph fields
 
-- [ ] Decide base OG values for all pages, in line with the Open Graph spec \([og-spec]\):
+- [x] Decide base OG values for all pages, in line with the Open Graph spec \([og-spec]\):
   - [ ] `og:type` = `website`.
   - [ ] `og:site_name` = approved brand string.
   - [ ] `og:locale` = `en_US` (or alternative if needed).
@@ -76,7 +76,7 @@
 
 ### 3.6 X/Twitter card fields
 
-- [ ] Confirm use of `summary_large_image` card type per X docs \([x-cards]\).
+- [x] Confirm use of `summary_large_image` card type per X docs \([x-cards]\).
 - [ ] Decide `twitter:site` handle (e.g., `@ocsunsoakedpools`) (**needs owner input**).
 - [ ] Decide whether to set a `twitter:creator` handle (**needs owner input**).
 - [ ] Confirm mapping:
@@ -97,12 +97,12 @@
 
 ### 3.8 Structured data
 
-- [ ] Approve `WebSite` JSON-LD fields (best-practice, no case study cited, per \([g-site-names]\)):
+- [x] Approve `WebSite` JSON-LD fields (best-practice, no case study cited, per \([g-site-names]\)):
   - [ ] `name` (primary site name).
   - [ ] `alternateName` (if any).
   - [ ] `url` (canonical homepage URL).
 - [ ] Decide whether to include an optional `SearchAction` (only if site search will exist later).
-- [ ] Approve `LocalBusiness` (or more specific subtype) JSON-LD fields (best-practice, no case study cited):
+- [x] Approve `LocalBusiness` (or more specific subtype) JSON-LD fields (best-practice, no case study cited):
   - [ ] `name`.
   - [ ] `image` (logo or hero image URL).
   - [ ] `address` (full postal address).
@@ -115,8 +115,8 @@
 
 ### Option A: Minimal shell-level metadata (single HTML shell)
 
-- [ ] Decide if **Option A** will be used as the **initial, fastest rollout**.
-- [ ] If yes, commit that `index.html` will be the **single source of truth** for:
+- [x] Decide if **Option A** will be used as the **initial, fastest rollout**.
+- [x] If yes, commit that `index.html` will be the **single source of truth** for:
   - [ ] `<title>` and `<meta name="description">`.
   - [ ] `<link rel="canonical">`.
   - [ ] Favicon `<link>` tags.
@@ -140,42 +140,42 @@
 
 ### Step 1 — Confirm external “Bolt.new” origin
 
-- [ ] Open **live production URL** in browser and use “View Source” to search for `Bolt`, `Bolt.new`, and `meta name="generator"`.
+- [x] Open **live production URL** in browser and use “View Source” to search for `Bolt`, `Bolt.new`, and `meta name="generator"`.
 - [ ] Run `curl -L https://your-production-domain/` and search for `Bolt` / `Bolt.new` in the raw HTML.
-- [ ] Compare live HTML with local `dist/index.html` to confirm any “Bolt.new” is **not** coming from this repo.
+- [x] Compare live HTML with local `dist/index.html` to confirm any “Bolt.new” is **not** coming from this repo.
 - [ ] If “Bolt.new” appears live but not in `dist/index.html`, document **exactly where** it appears (head tag, footer, injected scripts, generator meta).
 - [ ] Identify the external system injecting it (hosting dashboard, page builder, proxy, etc.).
 
 ### Step 2 — Define canonical domain and brand strings
 
-- [ ] Decide canonical domain and protocol (e.g., `https://ocsunsoakedpools.com`).
+- [x] Decide canonical domain and protocol (e.g., `https://ocsunsoakedpools.com`).
 - [ ] Decide whether to use `www` subdomain or bare domain as canonical.
 - [ ] Approve primary brand name, display name, and any alternate names.
 - [ ] Record all of this in a **shared doc** (e.g., `README` or `COPY_IMPROVEMENTS.md`) for future reference.
 
 ### Step 3 — Upgrade global shell metadata in `index.html`
 
-- [ ] Update `<title>` in `index.html` from `Welcome` to the approved homepage title.
-- [ ] Add `<meta name="description" ...>` in `index.html` with approved homepage description.
-- [ ] Add `<link rel="canonical" href="https://canonical-domain/">` in `index.html`, using the canonical domain from Step 2.
+- [x] Update `<title>` in `index.html` from `Welcome` to the approved homepage title.
+- [x] Add `<meta name="description" ...>` in `index.html` with approved homepage description.
+- [x] Add `<link rel="canonical" href="https://canonical-domain/">` in `index.html`, using the canonical domain from Step 2.
 - [ ] Add favicon `<link>` tags in `index.html` pointing to the agreed favicon files.
-- [ ] Add Open Graph tags in `index.html`:
+- [x] Add Open Graph tags in `index.html`:
   - [ ] `og:title`.
   - [ ] `og:description`.
   - [ ] `og:type` = `website`.
   - [ ] `og:site_name`.
   - [ ] `og:url` (canonical homepage URL).
   - [ ] `og:image` (homepage OG image URL).
-- [ ] Add X/Twitter Card tags in `index.html`:
+- [x] Add X/Twitter Card tags in `index.html`:
   - [ ] `twitter:card` = `summary_large_image`.
   - [ ] `twitter:title`.
   - [ ] `twitter:description`.
   - [ ] `twitter:image`.
   - [ ] `twitter:site` (and `twitter:creator` if desired).
-- [ ] Add JSON-LD `WebSite` block in `<head>` of `index.html` with approved fields.
-- [ ] Add JSON-LD `LocalBusiness` block in `<head>` of `index.html` with approved fields.
-- [ ] Run `npm run build`.
-- [ ] Open `dist/index.html` and confirm all new tags and JSON-LD are present and correct.
+- [x] Add JSON-LD `WebSite` block in `<head>` of `index.html` with approved fields.
+- [x] Add JSON-LD `LocalBusiness` block in `<head>` of `index.html` with approved fields.
+- [x] Run `npm run build`.
+- [x] Open `dist/index.html` and confirm all new tags and JSON-LD are present and correct.
 - [ ] Open `dist/index.html` in a browser to visually confirm **tab title** and **favicon**.
 
 ### Step 4 — Plan per-route metadata (before routing refactor)
@@ -202,11 +202,11 @@
 
 ### Step 6 — Add robots.txt and sitemap.xml
 
-- [ ] Draft `robots.txt`:
+- [x] Draft `robots.txt`:
   - [ ] Allow search engine crawling for all public pages.
   - [ ] Reference `sitemap.xml` URL.
-- [ ] Draft `sitemap.xml` listing all main URLs (homepage + key routes).
-- [ ] Plan where these files will live in the deployed environment (root of domain).
+- [x] Draft `sitemap.xml` listing all main URLs (homepage + key routes).
+- [x] Plan where these files will live in the deployed environment (root of domain).
 - [ ] After deployment, fetch `https://canonical-domain/robots.txt` and `https://canonical-domain/sitemap.xml` to confirm accessibility.
 - [ ] In Google Search Console:
   - [ ] Submit `sitemap.xml`.
@@ -232,8 +232,8 @@
 
 ### 6.1 HTML / “View Source” validation
 
-- [ ] Run `npm run build` and open `dist/index.html` locally.
-- [ ] Use “View Source” to confirm:
+- [x] Run `npm run build` and open `dist/index.html` locally.
+- [x] Use “View Source” to confirm:
   - [ ] `<title>` matches the target homepage title.
   - [ ] `<meta name="description">` exists and matches approved text.
   - [ ] OG tags exist with correct values.
@@ -279,8 +279,8 @@
 
 ### 7.1 Rollout sequencing
 
-- [ ] Phase 1: Implement **Option A** shell-level fixes in `index.html` and clean up external “Bolt.new” references (Steps 1, 2, 3, 8).
-- [ ] Phase 2: Add and deploy `robots.txt` and `sitemap.xml`, then verify in GSC (Step 6).
+- [x] Phase 1: Implement **Option A** shell-level fixes in `index.html` and clean up external “Bolt.new” references (Steps 1, 2, 3, 8).
+- [x] Phase 2: Add and deploy `robots.txt` and `sitemap.xml`, then verify in GSC (Step 6).
 - [ ] Phase 3: Implement routing + per-route metadata (Option B, Step 5) when ready to invest more in SEO.
 - [ ] Phase 4: Refine structured data and social image strategy (Steps 3, 5, 7 refinements).
 
