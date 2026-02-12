@@ -20,21 +20,6 @@ export default function Header() {
     setMobileMenuOpen(false);
   };
 
-  /** Scroll to the Services section on the homepage */
-  const scrollToServices = () => {
-    setMobileMenuOpen(false);
-    if (currentPage !== 'home') {
-      navigate('home');
-      // Wait for the home page to render before scrolling
-      setTimeout(() => {
-        const el = document.getElementById('services');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      const el = document.getElementById('services');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const isNonHomePage = currentPage !== 'home';
   const shouldHaveColor = isNonHomePage || scrolled;
@@ -104,24 +89,7 @@ export default function Header() {
             className="desktop-nav">
             <NavButton page="home" label="HOME" currentPage={currentPage} onClick={handleNavClick} />
             <NavButton page="about" label="ABOUT" currentPage={currentPage} onClick={handleNavClick} />
-            <button
-              onClick={scrollToServices}
-              style={{
-                color: '#fff',
-                textDecoration: 'none',
-                fontSize: '1.05rem',
-                fontWeight: '600',
-                letterSpacing: '1px',
-                fontFamily: "'Montserrat', sans-serif",
-                transition: 'color 0.2s ease',
-                border: 'none',
-                background: 'none',
-                cursor: 'pointer',
-                textTransform: 'uppercase'
-              }}
-            >
-              SERVICES
-            </button>
+            <NavButton page="services" label="SERVICES" currentPage={currentPage} onClick={handleNavClick} />
             <NavButton page="process" label="PROCESS" currentPage={currentPage} onClick={handleNavClick} />
             <a
               href="tel:+19497362671"
@@ -175,25 +143,7 @@ export default function Header() {
             className="mobile-nav">
             <MobileNavButton page="home" label="HOME" currentPage={currentPage} onClick={handleNavClick} />
             <MobileNavButton page="about" label="ABOUT" currentPage={currentPage} onClick={handleNavClick} />
-            <button
-              onClick={scrollToServices}
-              style={{
-                color: '#fff',
-                textDecoration: 'none',
-                fontSize: '1.125rem',
-                fontWeight: '600',
-                letterSpacing: '1px',
-                fontFamily: "'Montserrat', sans-serif",
-                padding: '0.5rem 0',
-                textAlign: 'left',
-                border: 'none',
-                background: 'none',
-                cursor: 'pointer',
-                textTransform: 'uppercase'
-              }}
-            >
-              SERVICES
-            </button>
+            <MobileNavButton page="services" label="SERVICES" currentPage={currentPage} onClick={handleNavClick} />
             <MobileNavButton page="process" label="PROCESS" currentPage={currentPage} onClick={handleNavClick} />
             <a
               href="tel:+19497362671"

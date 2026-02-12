@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
 import Process from './pages/Process';
+import Services from './pages/Services';
 import Contact from './pages/Contact';
 
 const NavigationContext = createContext();
@@ -27,6 +28,8 @@ export default function App() {
         return <About />;
       case 'process':
         return <Process />;
+      case 'services':
+        return <Services />;
       case 'contact':
         return <Contact />;
       default:

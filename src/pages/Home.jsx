@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
+import ServicesSection from '../components/ServicesSection';
 import MapSection from '../components/MapSection';
 import FAQSection from '../components/FAQSection';
 import BeforeAfter from '../components/BeforeAfter';
@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <Hero />
       <Reviews />
-      <Services />
+      <ServicesSection />
       <BeforeAfter />
       <ProcessSection />
       <MapSection />
