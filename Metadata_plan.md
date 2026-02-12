@@ -5,25 +5,25 @@
 - [x] Confirm there is **no `Bolt` / `Bolt.new` / `meta name="generator"`** in the live production HTML (even though the repo and `dist/index.html` are clean).
 - [ ] Document that the only current metadata in `index.html` / `dist/index.html` is `<title>Welcome</title>` plus basic charset/viewport tags.
 - [ ] Acknowledge that any “Bolt.new” still visible in search/social is likely from an **external layer** (hosting, proxy, legacy generator, or cached HTML).
-- [ ] Confirm that all logical routes (Home, About, Process, Contact, RequestQuote) are rendered from a **single HTML shell** (`index.html` → `dist/index.html`) via the SPA.
+- [x] Confirm that all logical routes (Home, About, Process, Contact, RequestQuote) are rendered from a **single HTML shell** (`index.html` → `dist/index.html`) via the SPA.
 - [ ] Record that crawlers without JS currently see the **same weak metadata for every URL** (title only, no description/canonical/OG/Twitter/robots/structured data).
 
 ## 2. Current-state metadata inventory — checklist
 
-- [x] Verify current `<title>` in `index.html` / `dist/index.html` is `Welcome` and log it as **generic / non-brand / non-keyword**.
-- [x] Confirm **no `<meta name="description">`** exists in `index.html` or `dist/index.html`.
+- [ ] Verify current `<title>` in `index.html` / `dist/index.html` is `Welcome` and log it as **generic / non-brand / non-keyword**.
+- [ ] Confirm **no `<meta name="description">`** exists in `index.html` or `dist/index.html`.
 - [ ] Confirm **no `<link rel="canonical">`** exists anywhere in the repo.
 - [x] Confirm **no `<meta name="robots">`** directives exist for any page.
-- [x] Confirm there is **no `/robots.txt`** file in the repo.
-- [x] Confirm there is **no `sitemap.xml`** file in the repo.
+- [ ] Confirm there is **no `/robots.txt`** file in the repo.
+- [ ] Confirm there is **no `sitemap.xml`** file in the repo.
 - [ ] Confirm there is **no explicit site name signal** (no brand in `<title>` pattern, no `WebSite.name` in structured data).
-- [ ] Confirm there are **no favicon tags or favicon files** referenced in the repo.
+- [x] Confirm there are **no favicon tags or favicon files** referenced in the repo.
 - [ ] Confirm there are **no Open Graph tags** (`og:title`, `og:description`, `og:site_name`, `og:image`, etc.) in `index.html` / `dist/index.html`.
 - [ ] Confirm there are **no X/Twitter Card tags** (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`, etc.).
 - [ ] Confirm there are **no JSON-LD blocks** for `WebSite`, `Organization`, or `LocalBusiness`.
-- [ ] Confirm there is **no `application-name` or `apple-mobile-web-app-title`** meta tag.
-- [ ] Confirm there is **no `<meta name="generator">`** present after build.
-- [ ] Confirm routing is **state-based SPA only**, so crawlers see identical metadata for all URLs.
+- [x] Confirm there is **no `application-name` or `apple-mobile-web-app-title`** meta tag.
+- [x] Confirm there is **no `<meta name="generator">`** present after build.
+- [x] Confirm routing is **state-based SPA only**, so crawlers see identical metadata for all URLs.
 
 ## 3. Target metadata spec (brand-correct) — checklist
 
@@ -64,9 +64,9 @@
 ### 3.5 Open Graph fields
 
 - [x] Decide base OG values for all pages, in line with the Open Graph spec \([og-spec]\):
-  - [ ] `og:type` = `website`.
-  - [ ] `og:site_name` = approved brand string.
-  - [ ] `og:locale` = `en_US` (or alternative if needed).
+  - [x] `og:type` = `website`.
+  - [x] `og:site_name` = approved brand string.
+  - [x] `og:locale` = `en_US` (or alternative if needed).
 - [ ] Confirm each page will specify:
   - [ ] `og:title` matching or closely mirroring `<title>`.
   - [ ] `og:description` matching meta description.
@@ -80,9 +80,9 @@
 - [ ] Decide `twitter:site` handle (e.g., `@ocsunsoakedpools`) (**needs owner input**).
 - [ ] Decide whether to set a `twitter:creator` handle (**needs owner input**).
 - [ ] Confirm mapping:
-  - [ ] `twitter:title` ⇔ `og:title`.
-  - [ ] `twitter:description` ⇔ `og:description`.
-  - [ ] `twitter:image` ⇔ `og:image`.
+  - [x] `twitter:title` ⇔ `og:title`.
+  - [x] `twitter:description` ⇔ `og:description`.
+  - [x] `twitter:image` ⇔ `og:image`.
 
 ### 3.7 Favicon set
 
@@ -98,17 +98,17 @@
 ### 3.8 Structured data
 
 - [x] Approve `WebSite` JSON-LD fields (best-practice, no case study cited, per \([g-site-names]\)):
-  - [ ] `name` (primary site name).
+  - [x] `name` (primary site name).
   - [ ] `alternateName` (if any).
-  - [ ] `url` (canonical homepage URL).
+  - [x] `url` (canonical homepage URL).
 - [ ] Decide whether to include an optional `SearchAction` (only if site search will exist later).
 - [x] Approve `LocalBusiness` (or more specific subtype) JSON-LD fields (best-practice, no case study cited):
-  - [ ] `name`.
+  - [x] `name`.
   - [ ] `image` (logo or hero image URL).
-  - [ ] `address` (full postal address).
-  - [ ] `telephone` (e.g., `(949) 736-2671`).
-  - [ ] `url` (homepage URL).
-  - [ ] `areaServed` (list of Orange County cities).
+  - [x] `address` (full postal address).
+  - [x] `telephone` (e.g., `(949) 736-2671`).
+  - [x] `url` (homepage URL).
+  - [x] `areaServed` (list of Orange County cities).
   - [ ] Any additional fields like `openingHours` and `geo` if desired.
 
 ## 4. Implementation options — checklist
@@ -117,13 +117,13 @@
 
 - [x] Decide if **Option A** will be used as the **initial, fastest rollout**.
 - [x] If yes, commit that `index.html` will be the **single source of truth** for:
-  - [ ] `<title>` and `<meta name="description">`.
-  - [ ] `<link rel="canonical">`.
+  - [x] `<title>` and `<meta name="description">`.
+  - [x] `<link rel="canonical">`.
   - [ ] Favicon `<link>` tags.
-  - [ ] OG tags.
-  - [ ] X/Twitter Card tags.
-  - [ ] `WebSite` and `LocalBusiness` JSON-LD.
-- [ ] Accept that all routes will share **one set of shell-level metadata** until routing is upgraded (best-practice note only; see \([g-title-links]\), \([g-snippets]\)).
+  - [x] OG tags.
+  - [x] X/Twitter Card tags.
+  - [x] `WebSite` and `LocalBusiness` JSON-LD.
+- [x] Accept that all routes will share **one set of shell-level metadata** until routing is upgraded (best-practice note only; see \([g-title-links]\), \([g-snippets]\)).
 
 ### Option B: Scalable per-route metadata with real URLs
 
@@ -160,16 +160,16 @@
 - [x] Add `<link rel="canonical" href="https://canonical-domain/">` in `index.html`, using the canonical domain from Step 2.
 - [ ] Add favicon `<link>` tags in `index.html` pointing to the agreed favicon files.
 - [x] Add Open Graph tags in `index.html`:
-  - [ ] `og:title`.
-  - [ ] `og:description`.
-  - [ ] `og:type` = `website`.
-  - [ ] `og:site_name`.
-  - [ ] `og:url` (canonical homepage URL).
+  - [x] `og:title`.
+  - [x] `og:description`.
+  - [x] `og:type` = `website`.
+  - [x] `og:site_name`.
+  - [x] `og:url` (canonical homepage URL).
   - [ ] `og:image` (homepage OG image URL).
 - [x] Add X/Twitter Card tags in `index.html`:
-  - [ ] `twitter:card` = `summary_large_image`.
-  - [ ] `twitter:title`.
-  - [ ] `twitter:description`.
+  - [x] `twitter:card` = `summary_large_image`.
+  - [x] `twitter:title`.
+  - [x] `twitter:description`.
   - [ ] `twitter:image`.
   - [ ] `twitter:site` (and `twitter:creator` if desired).
 - [x] Add JSON-LD `WebSite` block in `<head>` of `index.html` with approved fields.
@@ -203,8 +203,8 @@
 ### Step 6 — Add robots.txt and sitemap.xml
 
 - [x] Draft `robots.txt`:
-  - [ ] Allow search engine crawling for all public pages.
-  - [ ] Reference `sitemap.xml` URL.
+  - [x] Allow search engine crawling for all public pages.
+  - [x] Reference `sitemap.xml` URL.
 - [x] Draft `sitemap.xml` listing all main URLs (homepage + key routes).
 - [x] Plan where these files will live in the deployed environment (root of domain).
 - [ ] After deployment, fetch `https://canonical-domain/robots.txt` and `https://canonical-domain/sitemap.xml` to confirm accessibility.
