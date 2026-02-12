@@ -162,7 +162,7 @@ export default function Hero() {
               maxWidth: '540px',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Consistent weekly care that keeps your pool looking beautiful
+              Consistent weekly care that keeps your pool looking beautiful.
               <br />
               Every visit includes proper skimming, brushing, and balanced chemistry.
             </p>
