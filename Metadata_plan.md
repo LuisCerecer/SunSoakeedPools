@@ -71,7 +71,7 @@
   - [ ] `og:title` matching or closely mirroring `<title>`.
   - [ ] `og:description` matching meta description.
   - [ ] `og:url` matching the canonical URL for that page.
-- [ ] Choose or design a **homepage OG image** (ideally 1200×630, best-practice, no case study cited) and its public URL (**needs owner input**).
+- [x] Choose or design a **homepage OG image** (ideally 1200×630, best-practice, no case study cited) and its public URL (**needs owner input**).
 - [ ] Decide whether inner pages will **reuse** the homepage OG image or have **page-specific images**.
 
 ### 3.6 X/Twitter card fields
@@ -86,14 +86,14 @@
 
 ### 3.7 Favicon set
 
-- [ ] Approve a **favicon design** derived from `/image.png` (**needs owner input**).
-- [ ] Generate favicon assets (best-practice, no case study cited):
-  - [ ] `favicon.ico` or square PNG 48–192px at root.
-  - [ ] `favicon-32x32.png`.
-  - [ ] `favicon-16x16.png`.
-  - [ ] `apple-touch-icon.png` (180×180).
-- [ ] Confirm the final file names and paths for all favicon assets.
-- [ ] Confirm that head markup will reference these exact paths per Google’s favicon guidelines \([g-favicons]\).
+- [x] Approve a **favicon design** derived from `/image.png` (**needs owner input**).
+- [x] Generate favicon assets (best-practice, no case study cited):
+  - [x] `favicon.ico` or square PNG 48–192px at root.
+  - [x] `favicon-32x32.png`.
+  - [x] `favicon-16x16.png`.
+  - [x] `apple-touch-icon.png` (180×180).
+- [x] Confirm the final file names and paths for all favicon assets.
+- [x] Confirm that head markup will reference these exact paths per Google’s favicon guidelines \([g-favicons]\).
 
 ### 3.8 Structured data
 
@@ -158,7 +158,7 @@
 - [x] Update `<title>` in `index.html` from `Welcome` to the approved homepage title.
 - [x] Add `<meta name="description" ...>` in `index.html` with approved homepage description.
 - [x] Add `<link rel="canonical" href="https://canonical-domain/">` in `index.html`, using the canonical domain from Step 2.
-- [ ] Add favicon `<link>` tags in `index.html` pointing to the agreed favicon files.
+- [x] Add favicon `<link>` tags in `index.html` pointing to the agreed favicon files.
 - [x] Add Open Graph tags in `index.html`:
   - [x] `og:title`.
   - [x] `og:description`.
@@ -176,7 +176,7 @@
 - [x] Add JSON-LD `LocalBusiness` block in `<head>` of `index.html` with approved fields.
 - [x] Run `npm run build`.
 - [x] Open `dist/index.html` and confirm all new tags and JSON-LD are present and correct.
-- [ ] Open `dist/index.html` in a browser to visually confirm **tab title** and **favicon**.
+- [x] Open `dist/index.html` in a browser to visually confirm **tab title** and **favicon**.
 
 ### Step 4 — Plan per-route metadata (before routing refactor)
 
