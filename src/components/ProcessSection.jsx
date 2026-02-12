@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const processSteps = [
   {
@@ -27,60 +27,7 @@ const processSteps = [
   }
 ];
 
-const faqData = [
-  {
-    question: "What’s included in a typical weekly maintenance visit?",
-    answer: `Weekly maintenance is the consistent work that keeps the pool clean, clear, and sanitary—based on what it needs that week.
-
-Skim surface debris every visit (leaves and anything that fell in since the last service)
-
-Bottom netting when debris sinks (coarse net for heavier debris)
-
-Fine-net “polish” when needed (dirt, sand, pollen, smaller particles)
-
-Brush the waterline and walls when buildup or clinging debris appears
-
-Vacuum as needed when debris is too heavy for netting alone
-
-Chemistry adjusted (chlorine + pH) for sanitation and comfortable water
-
-Seasonal deeper checks when appropriate (alkalinity, salt for salt pools, phosphates, TDS, metals, calcium)`
-  },
-  {
-    question: "How do you adjust service for seasonal conditions (heat, wind, debris, rain) in South OC?",
-    answer: `We adjust based on what’s actually happening in your pool that week—no rigid checklist.
-
-Wind or heavier debris weeks: more skimming, bottom netting, and vacuuming
-
-Hot stretches: chemistry is monitored closely (chlorine + pH) to keep water sanitized and comfortable
-
-After rain: water chemistry can shift, so rebalancing is handled as needed
-
-Periodic deeper water checks: done when it makes sense to keep overall water quality dialed in`
-  },
-  {
-    question: "If something breaks, what does your repair process look like, and do you offer urgent repair help?",
-    answer: `Yes—we handle most common equipment issues, and the process is straightforward.
-
-Diagnosis: identify what’s going on (circulation/pressure, leaks, valves, equipment performance)
-
-Estimate: explain what’s needed before any work is done
-
-Repair: proceed only after you’re clear on the fix
-
-If it’s outside our scope of expertise, we’ll tell you upfront and point you in the right direction
-
-We’re always ready to help with urgent situations. For time-sensitive issues, just give us a call—if we can move quickly on your route, we will.`
-  }
-];
-
 export default function ProcessSection() {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section style={{
       padding: '5rem 1.5rem',
@@ -121,118 +68,6 @@ export default function ProcessSection() {
           {processSteps.map((step, index) => (
             <ProcessCard key={index} step={step} />
           ))}
-        </div>
-
-        {/* FAQ Section */}
-        <div style={{
-          maxWidth: '800px',
-          margin: '0 auto 4rem'
-        }}>
-          <h2 style={{
-            fontSize: 'clamp(1.75rem, 4vw, 2.25rem)',
-            fontWeight: '800',
-            color: '#1f2937',
-            textAlign: 'center',
-            marginBottom: '2.5rem',
-            letterSpacing: '-0.02em',
-            fontFamily: "'Montserrat', sans-serif"
-          }}>
-            Frequently Asked Questions
-          </h2>
-
-          <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem'
-          }}>
-            {faqData.map((faq, index) => (
-              <div
-                key={index}
-                style={{
-                  borderRadius: '16px',
-                  border: '1px solid #e5e7eb',
-                  overflow: 'hidden',
-                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  backgroundColor: openIndex === index ? '#f8fafc' : '#ffffff',
-                  boxShadow: openIndex === index ? '0 10px 25px -5px rgba(0, 0, 0, 0.05)' : '0 2px 10px rgba(0,0,0,0.02)'
-                }}
-              >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  style={{
-                    width: '100%',
-                    padding: '1.5rem 2rem',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    background: 'none',
-                    border: 'none',
-                    cursor: 'pointer',
-                    textAlign: 'left',
-                    outline: 'none'
-                  }}
-                >
-                  <span style={{
-                    fontSize: '1.1rem',
-                    fontWeight: '700',
-                    color: '#374151',
-                    lineHeight: '1.4',
-                    fontFamily: "'Montserrat', sans-serif"
-                  }}>
-                    {faq.question}
-                  </span>
-                  <div style={{
-                    width: '32px',
-                    height: '32px',
-                    borderRadius: '50%',
-                    backgroundColor: openIndex === index ? '#0891b2' : '#f1f5f9',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    transition: 'all 0.3s ease',
-                    flexShrink: 0,
-                    marginLeft: '1.5rem'
-                  }}>
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke={openIndex === index ? '#ffffff' : '#64748b'}
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      style={{
-                        transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
-                        transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
-                      }}
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </div>
-                </button>
-                <div style={{
-                  maxHeight: openIndex === index ? '1000px' : '0',
-                  opacity: openIndex === index ? '1' : '0',
-                  overflow: 'hidden',
-                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                  padding: openIndex === index ? '0 2rem 2rem 2rem' : '0 2rem'
-                }}>
-                  <div style={{
-                    color: '#4b5563',
-                    lineHeight: '1.7',
-                    fontSize: '1rem',
-                    whiteSpace: 'pre-line',
-                    borderTop: openIndex === index ? '1px solid #f1f5f9' : 'none',
-                    paddingTop: openIndex === index ? '1.5rem' : '0',
-                    fontFamily: "'Montserrat', sans-serif"
-                  }}>
-                    {faq.answer}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div style={{
