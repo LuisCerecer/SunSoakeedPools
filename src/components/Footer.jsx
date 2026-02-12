@@ -19,24 +19,27 @@ export default function Footer() {
       <div style={{
         maxWidth: '1400px',
         margin: '0 auto',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '3rem',
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '2.5rem',
+        justifyContent: 'space-between',
         alignItems: 'start'
       }}>
-        <div>
+        {/* 1. Logo */}
+        <div style={{ flex: '0 0 auto', maxWidth: '200px' }}>
           <img
             src="/image.png"
             alt="Logo"
             style={{
-              height: '60px',
+              maxHeight: '80px',
               width: 'auto',
-              marginBottom: '1rem'
+              objectFit: 'contain'
             }}
           />
         </div>
 
-        <div>
+        {/* 2. Address */}
+        <div style={{ flex: '0 0 auto' }}>
           <h3 style={{
             fontSize: '1.125rem',
             fontWeight: '700',
@@ -51,12 +54,13 @@ export default function Footer() {
             lineHeight: '1.6',
             color: '#d1d5db'
           }}>
-            Google Business Profile<br />
-            Address
+            532 Marketview,<br />
+            Irvine, CA 92602
           </p>
         </div>
 
-        <div>
+        {/* 3. Phone */}
+        <div style={{ flex: '0 0 auto' }}>
           <h3 style={{
             fontSize: '1.125rem',
             fontWeight: '700',
@@ -72,14 +76,30 @@ export default function Footer() {
               fontSize: '1rem',
               color: '#d1d5db',
               textDecoration: 'none',
-              transition: 'color 0.2s'
+              transition: 'color 0.2s',
+              whiteSpace: 'nowrap'
             }}
           >
             (949) 736-2671
           </a>
         </div>
 
-        <div>
+        {/* 4. Map (Expanded) */}
+        <div style={{ flex: '1 1 300px', minWidth: '250px', height: '200px', borderRadius: '8px', overflow: 'hidden' }}>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.9878211701475!2d-117.78328720684829!3d33.72813093258166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdc8190ccb9bf%3A0x2de26fc97b169977!2s532%20Marketview%2C%20Irvine%2C%20CA%2092602!5e1!3m2!1sen!2sus!4v1770856397841!5m2!1sen!2sus"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map"
+          ></iframe>
+        </div>
+
+        {/* 5. Hours */}
+        <div style={{ flex: '0 0 auto' }}>
           <h3 style={{
             fontSize: '1.125rem',
             fontWeight: '700',
@@ -104,7 +124,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        {/* 6. Links */}
+        <div style={{ flex: '0 0 auto' }}>
           <h3 style={{
             fontSize: '1.125rem',
             fontWeight: '700',
