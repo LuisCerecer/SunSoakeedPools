@@ -37,7 +37,7 @@
 ### 3.2 Title strategy
 
 - [x] Approve a **global title template** (best-practice, no case study cited): `Primary keyword + service + location | OC Sun Soaked Pools`.
-- [x] Approve homepage title candidate: `Professional Pool Service in Orange County | OC Sun Soaked Pools` (**needs owner input**).
+- [x] Approve homepage title candidate: `ocsunsoakedpools professional cleaning services` (updated per user request).
 - [ ] Approve About page title candidate: `About OC Sun Soaked Pools | Certified Pool Service in Orange County` (**needs owner input**).
 - [ ] Approve Process page title candidate: `How Our Pool Service Works | OC Sun Soaked Pools` (**needs owner input**).
 - [ ] Approve Contact page title candidate: `Contact OC Sun Soaked Pools | Free Pool Service Quote` (**needs owner input**).
