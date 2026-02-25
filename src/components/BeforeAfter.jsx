@@ -11,7 +11,7 @@ const beforeAfterImages = [
   },
   {
     id: 3,
-    image: '/beforeafter_martin.png'
+    image: 'https://res.cloudinary.com/dy089iwsg/image/upload/v1772056983/beforeafter_Martin_loiyyv.png'
   },
   {
     id: 4,
