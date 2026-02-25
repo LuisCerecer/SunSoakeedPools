@@ -110,7 +110,7 @@ export default function Header() {
               (949) 736-2671
             </a>
             <button
-              onClick={() => handleNavClick('contact')}
+              onClick={() => handleNavClick('contactus')}
               style={{
                 backgroundColor: '#5dd3d3',
                 color: '#1f2937',
@@ -161,7 +161,7 @@ export default function Header() {
               (949) 736-2671
             </a>
             <button
-              onClick={() => handleNavClick('contact')}
+              onClick={() => handleNavClick('contactus')}
               style={{
                 backgroundColor: '#5dd3d3',
                 color: '#1f2937',

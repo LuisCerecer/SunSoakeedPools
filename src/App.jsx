@@ -7,6 +7,7 @@ import About from './pages/About';
 import Process from './pages/Process';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import RequestQuote from './pages/RequestQuote';
 
 const NavigationContext = createContext();
 
@@ -32,6 +33,8 @@ export default function App() {
         return <Services />;
       case 'contact':
         return <Contact />;
+      case 'contactus':
+        return <RequestQuote />;
       default:
         return <Home />;
     }

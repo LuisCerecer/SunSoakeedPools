@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '../App';
 
 const processSteps = [
   {
@@ -28,6 +29,7 @@ const processSteps = [
 ];
 
 export default function ProcessSection() {
+  const { navigate } = useNavigation();
   return (
     <section style={{
       padding: '5rem 1.5rem',
@@ -111,8 +113,8 @@ export default function ProcessSection() {
             (949) 736-2671
           </a>
 
-          <a
-            href="/request-quote"
+          <button
+            onClick={() => navigate('contactus')}
             style={{
               backgroundColor: 'transparent',
               color: '#1f2937',
@@ -126,7 +128,8 @@ export default function ProcessSection() {
               gap: '0.75rem',
               transition: 'all 0.3s ease',
               border: '2px solid #1f2937',
-              fontFamily: "'Montserrat', sans-serif"
+              fontFamily: "'Montserrat', sans-serif",
+              cursor: 'pointer'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = '#1f2937';
@@ -148,7 +151,7 @@ export default function ProcessSection() {
               <line x1="9" y1="15" x2="15" y2="15" />
             </svg>
             FREE QUOTE
-          </a>
+          </button>
         </div>
       </div>
     </section>

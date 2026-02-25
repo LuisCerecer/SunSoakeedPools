@@ -144,7 +144,7 @@ export default function Footer() {
             <FooterLink onClick={() => handleNavClick('about')}>About</FooterLink>
             <FooterLink onClick={() => handleNavClick('process')}>Process</FooterLink>
             <FooterLink onClick={() => handleNavClick('contact')}>Contact</FooterLink>
-            <FooterLink onClick={() => handleNavClick('contact')}>Free Quote</FooterLink>
+            <FooterLink onClick={() => handleNavClick('contactus')}>Free Quote</FooterLink>
           </nav>
         </div>
       </div>

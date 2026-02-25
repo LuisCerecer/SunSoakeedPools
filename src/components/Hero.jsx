@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigation } from '../App';
 
 const backgroundImages = [
   '/phillipe_after.jpeg',
@@ -18,6 +19,7 @@ const serviceOptions = [
 ];
 
 export default function Hero() {
+  const { navigate } = useNavigation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
@@ -200,8 +202,8 @@ export default function Hero() {
               </a>
 
               {/* Secondary CTA — Get a Free Quote */}
-              <a
-                href="#hero-quote-form"
+              <button
+                onClick={() => navigate('contactus')}
                 style={{
                   backgroundColor: 'transparent',
                   color: '#fff',
@@ -220,7 +222,7 @@ export default function Hero() {
                 }}
               >
                 Get a Free Quote
-              </a>
+              </button>
             </div>
           </div>
 
