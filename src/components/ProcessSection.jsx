@@ -112,7 +112,7 @@ export default function ProcessSection() {
           </a>
 
           <a
-            href="/contact"
+            href="/request-quote"
             style={{
               backgroundColor: 'transparent',
               color: '#1f2937',
