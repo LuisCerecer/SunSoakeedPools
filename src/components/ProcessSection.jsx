@@ -63,11 +63,31 @@ export default function ProcessSection() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
           gap: '2rem',
-          marginBottom: '3.5rem'
+          marginBottom: '3.5rem',
+          position: 'relative'
         }}>
-          {processSteps.map((step, index) => (
-            <ProcessCard key={index} step={step} />
-          ))}
+          <style>{`
+            @media (min-width: 768px) {
+              .process-grid-wrapper {
+                position: relative;
+              }
+              .process-grid-wrapper::before {
+                content: '';
+                position: absolute;
+                top: 100px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: linear-gradient(to right, transparent, #5dd3d3 10%, #5dd3d3 90%, transparent);
+                z-index: 0;
+              }
+            }
+          `}</style>
+          <div className="process-grid-wrapper" style={{ display: 'contents' }}>
+            {processSteps.map((step, index) => (
+              <ProcessCard key={index} step={step} />
+            ))}
+          </div>
         </div>
 
         <div style={{
@@ -186,11 +206,11 @@ function ProcessCard({ step }) {
           display: 'inline-flex',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '48px',
-          height: '48px',
+          width: '56px',
+          height: '56px',
           borderRadius: '50%',
-          backgroundColor: '#5dd3d3',
-          color: '#1f2937',
+          backgroundColor: '#0891b2',
+          color: '#fff',
           fontSize: '1.5rem',
           fontWeight: '700',
           marginBottom: '1rem',
@@ -212,7 +232,7 @@ function ProcessCard({ step }) {
 
       <div style={{
         width: '100%',
-        height: '200px',
+        aspectRatio: '16 / 10',
         overflow: 'hidden',
         position: 'relative'
       }}>

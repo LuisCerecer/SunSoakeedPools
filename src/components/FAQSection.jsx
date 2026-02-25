@@ -37,7 +37,7 @@ export default function FAQSection() {
     return (
         <section style={{
             padding: '5rem 1.5rem',
-            backgroundColor: '#ffffff',
+            backgroundColor: '#f8fafc',
             fontFamily: "'Montserrat', sans-serif"
         }}>
             <div style={{
@@ -69,7 +69,7 @@ export default function FAQSection() {
                                 overflow: 'hidden',
                                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                                 backgroundColor: openIndex === index ? '#f8fafc' : '#ffffff',
-                                boxShadow: openIndex === index ? '0 10px 25px -5px rgba(0, 0, 0, 0.05)' : 'none'
+                                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
                             }}
                         >
                             <button

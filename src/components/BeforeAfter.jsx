@@ -22,6 +22,7 @@ const beforeAfterImages = [
 function BeforeAfterCard({ image, id }) {
   return (
     <div style={{
+      position: 'relative',
       borderRadius: '16px',
       overflow: 'hidden',
       boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
@@ -31,11 +32,11 @@ function BeforeAfterCard({ image, id }) {
       aspectRatio: '16 / 12'
     }}
     onMouseEnter={(e) => {
-      e.currentTarget.style.transform = 'translateY(-4px)';
+      e.currentTarget.style.transform = 'scale(1.01)';
       e.currentTarget.style.boxShadow = '0 8px 30px rgba(8, 145, 178, 0.25)';
     }}
     onMouseLeave={(e) => {
-      e.currentTarget.style.transform = 'translateY(0)';
+      e.currentTarget.style.transform = 'scale(1)';
       e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
     }}
     >
@@ -49,6 +50,34 @@ function BeforeAfterCard({ image, id }) {
           objectFit: 'cover'
         }}
       />
+      <div style={{
+        position: 'absolute',
+        top: '1rem',
+        left: '1rem',
+        backgroundColor: '#1f2937',
+        color: '#fff',
+        padding: '0.375rem 0.875rem',
+        borderRadius: '20px',
+        fontSize: '0.75rem',
+        fontWeight: '600',
+        fontFamily: "'Montserrat', sans-serif"
+      }}>
+        Before
+      </div>
+      <div style={{
+        position: 'absolute',
+        top: '1rem',
+        right: '1rem',
+        backgroundColor: '#5dd3d3',
+        color: '#1f2937',
+        padding: '0.375rem 0.875rem',
+        borderRadius: '20px',
+        fontSize: '0.75rem',
+        fontWeight: '600',
+        fontFamily: "'Montserrat', sans-serif"
+      }}>
+        After
+      </div>
     </div>
   );
 }
@@ -63,15 +92,23 @@ export default function BeforeAfter() {
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
-        <h2 style={{
-          fontSize: 'clamp(1.5rem, 4vw, 2.25rem)',
-          fontWeight: '700',
-          textAlign: 'center',
-          color: '#1f2937',
-          marginBottom: '3rem'
-        }}>
-          Before and After
-        </h2>
+        <div style={{ position: 'relative', display: 'inline-block', width: '100%', marginBottom: '3rem' }}>
+          <h2 style={{
+            fontSize: 'clamp(1.5rem, 4vw, 2.25rem)',
+            fontWeight: '700',
+            textAlign: 'center',
+            color: '#1f2937',
+            marginBottom: '1rem'
+          }}>
+            Before and After
+          </h2>
+          <div style={{
+            width: '40px',
+            height: '3px',
+            backgroundColor: '#5dd3d3',
+            margin: '0 auto'
+          }} />
+        </div>
 
         <div className="before-after-grid" style={{
           display: 'grid',

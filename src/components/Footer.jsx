@@ -14,7 +14,7 @@ export default function Footer() {
       backgroundColor: '#1f2937',
       color: '#fff',
       padding: '3rem 2rem',
-      borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+      borderTop: '3px solid #5dd3d3'
     }}>
       <div style={{
         maxWidth: '1400px',
@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         {/* 4. Map (Expanded) */}
-        <div style={{ flex: '1 1 300px', minWidth: '250px', height: '200px', borderRadius: '8px', overflow: 'hidden' }}>
+        <div style={{ flex: '1 1 300px', minWidth: '300px', maxWidth: '420px', height: '200px', borderRadius: '8px', overflow: 'hidden' }}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.9878211701475!2d-117.78328720684829!3d33.72813093258166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdc8190ccb9bf%3A0x2de26fc97b169977!2s532%20Marketview%2C%20Irvine%2C%20CA%2092602!5e1!3m2!1sen!2sus!4v1770856397841!5m2!1sen!2sus"
             width="100%"
@@ -155,7 +155,7 @@ export default function Footer() {
         paddingTop: '2rem',
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
         textAlign: 'center',
-        color: '#9ca3af',
+        color: '#d1d5db',
         fontSize: '0.875rem'
       }}>
         © {new Date().getFullYear()} All rights reserved.

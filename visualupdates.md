@@ -63,35 +63,35 @@
 ## 🟢 Low Priority
 
 ### 8. Before/After — Labels & Heading
-- [ ] Add "Before" (dark pill) and "After" (teal pill) badge overlays on each before/after image
-- [ ] Add a centered teal decorative underline (3px × 40px) beneath the section `<h2>` heading
-- [ ] Change card hover to `scale(1.01)` instead of `translateY(-4px)` since these are static images
+- [X] Add "Before" (dark pill) and "After" (teal pill) badge overlays on each before/after image
+- [X] Add a centered teal decorative underline (3px × 40px) beneath the section `<h2>` heading
+- [X] Change card hover to `scale(1.01)` instead of `translateY(-4px)` since these are static images
 
 **Files:** `BeforeAfter.jsx`
 
 ---
 
 ### 9. Process Section — Connecting Line + Circles
-- [ ] Increase step number circles from `48px` to `56px`
-- [ ] Change step circle color from `#5dd3d3` to `#0891b2` to match the hero primary CTA button
-- [ ] Add a horizontal dashed/solid line connecting the step circles on desktop
-- [ ] Switch card images from fixed `height: 200px` to `aspect-ratio: 16/10`
+- [X] Increase step number circles from `48px` to `56px`
+- [X] Change step circle color from `#5dd3d3` to `#0891b2` to match the hero primary CTA button
+- [X] Add a horizontal dashed/solid line connecting the step circles on desktop
+- [X] Switch card images from fixed `height: 200px` to `aspect-ratio: 16/10`
 
 **Files:** `ProcessSection.jsx`
 
 ---
 
 ### 10. FAQ Section — Depth
-- [ ] Change FAQ section background from white (`#ffffff`) to `#f8fafc`
-- [ ] Add `box-shadow: 0 2px 8px rgba(0,0,0,0.04)` to all FAQ items at rest (currently only the open item has shadow)
+- [X] Change FAQ section background from white (`#ffffff`) to `#f8fafc`
+- [X] Add `box-shadow: 0 2px 8px rgba(0,0,0,0.04)` to all FAQ items at rest (currently only the open item has shadow)
 
 **Files:** `FAQSection.jsx`
 
 ---
 
 ### 11. Footer — Polish
-- [ ] Replace `borderTop: '1px solid rgba(255,255,255,0.1)'` with `borderTop: '3px solid #5dd3d3'`
-- [ ] Update copyright bar text color from `#9ca3af` to `#d1d5db` for consistency
-- [ ] Set explicit `minWidth: 300px` and `maxWidth: 420px` on the Google Maps embed container
+- [X] Replace `borderTop: '1px solid rgba(255,255,255,0.1)'` with `borderTop: '3px solid #5dd3d3'`
+- [X] Update copyright bar text color from `#9ca3af` to `#d1d5db` for consistency
+- [X] Set explicit `minWidth: 300px` and `maxWidth: 420px` on the Google Maps embed container
 
 **Files:** `Footer.jsx`
