@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: 'Filter Cleaning',
-    image: '/img_6181.jpg'
+    image: 'https://res.cloudinary.com/dy089iwsg/image/upload/v1772056642/IMG_2731_fqelqo.jpg'
   }
 ];
 
