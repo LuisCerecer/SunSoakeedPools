@@ -182,7 +182,6 @@ export default function Hero() {
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: '500'
               }}>
-                5.0 · Yelp Verified
               </span>
             </div>
 
