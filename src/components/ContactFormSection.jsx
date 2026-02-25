@@ -87,9 +87,7 @@ export default function ContactFormSection() {
   return (
     <section style={{
       padding: '5rem 1.5rem',
-      backgroundColor: '#f8fafc',
-      borderTop: '1px solid #e5e7eb',
-      position: 'relative'
+      backgroundColor: '#f8fafc'
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -128,7 +126,7 @@ export default function ContactFormSection() {
             transition: 'min-height 0.3s ease'
           }}>
             <div style={{
-              backgroundColor: '#1f2937',
+              background: 'linear-gradient(135deg, #1f2937 0%, #0f172a 100%)',
               padding: 'clamp(2rem, 4vw, 2.5rem)',
               display: 'flex',
               flexDirection: 'column'
@@ -253,7 +251,7 @@ export default function ContactFormSection() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '1.5rem',
+                gap: '1rem',
                 marginBottom: '1.5rem',
                 paddingBottom: '1.25rem',
                 borderBottom: '1px solid #e5e7eb',
@@ -267,7 +265,13 @@ export default function ContactFormSection() {
                 }}>
                   Request by
                 </span>
-                <div style={{ display: 'flex', gap: '1.5rem' }}>
+                <div style={{
+                  display: 'inline-flex',
+                  padding: '4px',
+                  borderRadius: '9999px',
+                  backgroundColor: '#f1f5f9',
+                  gap: '0'
+                }}>
                   <MethodToggle
                     label="Email"
                     isSelected={contactMethod === 'email'}
@@ -487,43 +491,19 @@ function MethodToggle({ label, isSelected, onClick }) {
       type="button"
       onClick={onClick}
       style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.5rem',
-        background: 'none',
+        padding: '0.5rem 1.25rem',
+        borderRadius: '9999px',
         border: 'none',
         cursor: 'pointer',
-        padding: '0.5rem 0',
-        fontFamily: "'Montserrat', sans-serif"
+        fontFamily: "'Montserrat', sans-serif",
+        fontSize: '1rem',
+        fontWeight: isSelected ? '600' : '500',
+        color: isSelected ? '#1f2937' : '#6b7280',
+        backgroundColor: isSelected ? '#5dd3d3' : 'transparent',
+        transition: 'background-color 0.2s, color 0.2s, font-weight 0.2s'
       }}
     >
-      <span style={{
-        width: '20px',
-        height: '20px',
-        borderRadius: '50%',
-        border: `2px solid ${isSelected ? '#5dd3d3' : '#9ca3af'}`,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        transition: 'border-color 0.2s'
-      }}>
-        {isSelected && (
-          <span style={{
-            width: '10px',
-            height: '10px',
-            borderRadius: '50%',
-            backgroundColor: '#5dd3d3'
-          }} />
-        )}
-      </span>
-      <span style={{
-        fontSize: '1rem',
-        color: isSelected ? '#1f2937' : '#6b7280',
-        fontWeight: isSelected ? '600' : '400',
-        transition: 'color 0.2s, font-weight 0.2s'
-      }}>
-        {label}
-      </span>
+      {label}
     </button>
   );
 }

@@ -33,9 +33,7 @@ export default function ProcessSection() {
   return (
     <section style={{
       padding: '5rem 1.5rem',
-      backgroundColor: '#ffffff',
-      borderTop: '1px solid #e5e7eb',
-      position: 'relative'
+      backgroundColor: '#ffffff'
     }}>
       <div style={{
         maxWidth: '1400px',

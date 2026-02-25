@@ -22,7 +22,7 @@ const beforeAfterImages = [
 function BeforeAfterCard({ image, id }) {
   return (
     <div style={{
-      borderRadius: '12px',
+      borderRadius: '16px',
       overflow: 'hidden',
       boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
       cursor: 'pointer',
@@ -57,9 +57,7 @@ export default function BeforeAfter() {
   return (
     <section style={{
       padding: '5rem 2rem',
-      backgroundColor: '#f8fafc',
-      borderTop: '1px solid #e5e7eb',
-      position: 'relative'
+      backgroundColor: '#f8fafc'
     }}>
       <div style={{
         maxWidth: '1200px',

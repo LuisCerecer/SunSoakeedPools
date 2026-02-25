@@ -20,20 +20,23 @@ function ServiceCard({ title, image }) {
   return (
     <div style={{
       position: 'relative',
-      borderRadius: '12px',
+      borderRadius: '16px',
       overflow: 'hidden',
       boxShadow: '0 4px 20px rgba(0, 0, 0, 0.12)',
       cursor: 'pointer',
-      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-      aspectRatio: '16 / 12'
+      transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
+      aspectRatio: '16 / 12',
+      border: '2px solid transparent'
     }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'translateY(-4px)';
         e.currentTarget.style.boxShadow = '0 8px 30px rgba(8, 145, 178, 0.25)';
+        e.currentTarget.style.borderColor = 'rgba(93, 211, 211, 0.6)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.12)';
+        e.currentTarget.style.borderColor = 'transparent';
       }}
     >
       <img
@@ -74,9 +77,7 @@ export default function ServicesSection() {
   return (
     <section id="services" style={{
       padding: '5rem 2rem',
-      backgroundColor: '#f8fafc',
-      borderTop: '1px solid #e5e7eb',
-      position: 'relative'
+      backgroundColor: '#f8fafc'
     }}>
       <div style={{
         maxWidth: '1000px',
@@ -103,15 +104,11 @@ export default function ServicesSection() {
         </div>
 
         <div className="services-bottom-row" style={{
-          display: 'flex',
-          justifyContent: 'center',
+          display: 'grid',
+          gridTemplateColumns: '1fr',
           marginBottom: '3.5rem'
         }}>
-          <div className="services-bottom-card" style={{
-            width: '50%',
-            minWidth: '280px',
-            maxWidth: '450px'
-          }}>
+          <div className="services-bottom-card" style={{ width: '100%' }}>
             <ServiceCard title={services[2].title} image={services[2].image} />
           </div>
         </div>

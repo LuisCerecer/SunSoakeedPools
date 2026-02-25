@@ -98,6 +98,7 @@ export default function Hero() {
       {backgroundImages.map((image, index) => (
         <div
           key={image}
+          className={currentImageIndex === index ? 'hero-bg-kenburns' : ''}
           style={{
             position: 'absolute',
             top: 0,
@@ -125,10 +126,22 @@ export default function Hero() {
         zIndex: 2
       }} />
 
+      {/* Top gradient behind header for readability */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '140px',
+        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent)',
+        zIndex: 3,
+        pointerEvents: 'none'
+      }} />
+
       {/* Content */}
       <div style={{
         position: 'relative',
-        zIndex: 3,
+        zIndex: 4,
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
@@ -151,14 +164,26 @@ export default function Hero() {
             {/* Star ratings */}
             <div style={{
               display: 'flex',
-              gap: '0.25rem',
-              marginBottom: '1.25rem'
+              alignItems: 'center',
+              gap: '0.5rem',
+              marginBottom: '1.25rem',
+              flexWrap: 'wrap'
             }}>
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} width="22" height="22" viewBox="0 0 24 24" fill="#facc15" stroke="none">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                </svg>
-              ))}
+              <div style={{ display: 'flex', gap: '0.25rem' }}>
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} width="22" height="22" viewBox="0 0 24 24" fill="#facc15" stroke="none">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                ))}
+              </div>
+              <span style={{
+                fontSize: '0.9rem',
+                color: 'rgba(255, 255, 255, 0.9)',
+                fontFamily: "'Montserrat', sans-serif",
+                fontWeight: '500'
+              }}>
+                5.0 · Yelp Verified
+              </span>
             </div>
 
             <h1 style={{
@@ -252,6 +277,7 @@ export default function Hero() {
             borderRadius: '16px',
             padding: 'clamp(1.5rem, 3vw, 2.25rem)',
             boxShadow: '0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+            borderTop: '3px solid #5dd3d3',
           }}>
             <h2 style={{
               fontSize: 'clamp(1.15rem, 2.5vw, 1.4rem)',

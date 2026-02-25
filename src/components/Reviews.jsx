@@ -27,9 +27,7 @@ export default function Reviews() {
   return (
     <section style={{
       padding: '5rem 1.5rem',
-      backgroundColor: '#f0f9f9',
-      borderTop: '1px solid #e5e7eb',
-      position: 'relative'
+      backgroundColor: '#f0f9f9'
     }}>
       <div style={{
         maxWidth: '1200px',

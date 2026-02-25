@@ -7,28 +7,17 @@
 ## 🔴 High Priority
 
 ### 1. Global Typography
-- [ ] Add `Montserrat` (400, 600, 700, 800) + `Inter` (400, 500) via Google Fonts `<link>` in `index.html`
-- [ ] Use `Inter` for body/paragraph copy; keep `Montserrat` for headings only
-- [ ] Increase size contrast between `h1`, `h2`, `h3` — headings should feel clearly tiered
-- [ ] Add `letter-spacing: -0.03em` to all `h2` elements at large sizes
+- [X] Add `Montserrat` (400, 600, 700, 800) + `Inter` (400, 500) via Google Fonts `<link>` in `index.html`
+- [X] Use `Inter` for body/paragraph copy; keep `Montserrat` for headings only
+- [X] Increase size contrast between `h1`, `h2`, `h3` — headings should feel clearly tiered
+- [X] Add `letter-spacing: -0.03em` to all `h2` elements at large sizes
 
 **Files:** `index.html`, `index.css`
 
----
-
-### 2. Reviews Section — Dark Band
-- [ ] Change Reviews section background to dark (`#0f172a`) with white text and teal stars
-- [ ] Update heading and subheading text colors to white/light for the dark background
-- [ ] Update CTA button colors for legibility on dark background
-
-**Files:** `Reviews.jsx`
-
----
-
-### 3. Header — Readability on Light Hero Photos
-- [ ] Add a permanent top-down gradient (`rgba(0,0,0,0.35)` → transparent) at the top of the Hero, behind the header, so white nav text is always readable
-- [ ] Add a teal left-border active indicator to mobile nav menu items (instead of color-only)
-- [ ] Standardize "FREE QUOTE" button in header to `borderRadius: 8px` (currently `4px`, inconsistent with rest of page)
+### 2. Header — Readability on Light Hero Photos
+- [X] Add a permanent top-down gradient (`rgba(0,0,0,0.35)` → transparent) at the top of the Hero, behind the header, so white nav text is always readable
+- [X] Add a teal left-border active indicator to mobile nav menu items (instead of color-only)
+- [X] Standardize "FREE QUOTE" button in header to `borderRadius: 8px` (currently `4px`, inconsistent with rest of page)
 
 **Files:** `Header.jsx`, `Hero.jsx`
 
@@ -37,35 +26,35 @@
 ## 🟡 Medium Priority
 
 ### 4. Hero — Polish
-- [ ] Add Ken Burns slow-zoom CSS keyframe animation to background images (gentle 1.0 → 1.04 scale over 6s)
-- [ ] Add a `3px solid #5dd3d3` top border to the white quote form card to tie it into the brand
-- [ ] Add `"5.0 · Yelp Verified"` supporting label next to the star rating row
+- [X] Add Ken Burns slow-zoom CSS keyframe animation to background images (gentle 1.0 → 1.04 scale over 6s)
+- [X] Add a `3px solid #5dd3d3` top border to the white quote form card to tie it into the brand
+- [X] Add `"5.0 · Yelp Verified"` supporting label next to the star rating row
 
 **Files:** `Hero.jsx`
 
 ---
 
 ### 5. Contact Form — Dark Panel + Toggle Style
-- [ ] Change left panel background to a diagonal gradient: `linear-gradient(135deg, #1f2937 0%, #0f172a 100%)`
-- [ ] Restyle the "Email / Schedule a call" toggle as pill-shaped tab buttons (filled teal when active) instead of radio buttons
+- [X] Change left panel background to a diagonal gradient: `linear-gradient(135deg, #1f2937 0%, #0f172a 100%)`
+- [X] Restyle the "Email / Schedule a call" toggle as pill-shaped tab buttons (filled teal when active) instead of radio buttons
 
 **Files:** `ContactFormSection.jsx`
 
 ---
 
 ### 6. Section Borders — Remove Dated Dividers
-- [ ] Remove all `borderTop: '1px solid #e5e7eb'` section separators — let background color contrast handle separation
-- [ ] Remove the corresponding `position: 'relative'` placeholder left behind on sections that only existed to support those borders
+- [X] Remove all `borderTop: '1px solid #e5e7eb'` section separators — let background color contrast handle separation
+- [X] Remove the corresponding `position: 'relative'` placeholder left behind on sections that only existed to support those borders
 
 **Files:** `ServicesSection.jsx`, `BeforeAfter.jsx`, `ProcessSection.jsx`, `Reviews.jsx`, `ContactFormSection.jsx`
 
 ---
 
 ### 7. Card Consistency — Normalize Border Radius
-- [ ] Update service cards from `borderRadius: 12px` to `16px`
-- [ ] Update before/after cards from `borderRadius: 12px` to `16px`
-- [ ] Add teal border hover accent on service cards: transitions from transparent to `rgba(93,211,211,0.6)` on hover
-- [ ] Make the third (bottom-center) service card span the full grid width instead of 50% centered
+- [X] Update service cards from `borderRadius: 12px` to `16px`
+- [X] Update before/after cards from `borderRadius: 12px` to `16px`
+- [X] Add teal border hover accent on service cards: transitions from transparent to `rgba(93,211,211,0.6)` on hover
+- [X] Make the third (bottom-center) service card span the full grid width instead of 50% centered
 
 **Files:** `ServicesSection.jsx`, `BeforeAfter.jsx`
 

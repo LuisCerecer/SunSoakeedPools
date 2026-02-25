@@ -31,11 +31,11 @@ export default function Header() {
         top: 0,
         left: 0,
         right: 0,
-        backgroundColor: shouldHaveColor ? 'rgba(31, 41, 55, 0.98)' : 'transparent',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+        backgroundColor: shouldHaveColor ? 'rgba(15, 23, 42, 0.98)' : 'transparent',
+        borderBottom: '1px solid rgba(148, 163, 184, 0.35)',
         zIndex: 1000,
         padding: '1rem 2rem',
-        transition: 'background-color 0.3s ease'
+        transition: 'background-color 0.3s ease, border-color 0.3s ease'
       }}>
         <div style={{
           maxWidth: '1400px',
@@ -115,7 +115,7 @@ export default function Header() {
                 backgroundColor: '#5dd3d3',
                 color: '#1f2937',
                 padding: '0.875rem 2rem',
-                borderRadius: '4px',
+                borderRadius: '8px',
                 fontWeight: '700',
                 fontSize: '0.95rem',
                 letterSpacing: '0.5px',
@@ -166,7 +166,7 @@ export default function Header() {
                 backgroundColor: '#5dd3d3',
                 color: '#1f2937',
                 padding: '0.875rem 2rem',
-                borderRadius: '4px',
+                borderRadius: '8px',
                 fontWeight: '700',
                 fontSize: '0.95rem',
                 letterSpacing: '0.5px',
@@ -223,11 +223,12 @@ function MobileNavButton({ page, label, currentPage, onClick }) {
         fontWeight: '600',
         letterSpacing: '1px',
         fontFamily: "'Montserrat', sans-serif",
-        padding: '0.5rem 0',
+        padding: '0.5rem 0 0.5rem 0.75rem',
         border: 'none',
         background: 'none',
         cursor: 'pointer',
         textAlign: 'left',
+        borderLeft: isActive ? '3px solid #5dd3d3' : '3px solid transparent',
         textTransform: 'uppercase'
       }}
     >
