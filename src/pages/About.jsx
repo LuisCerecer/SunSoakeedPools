@@ -73,7 +73,7 @@ export default function About() {
             <div style={{ flex: '1 1 400px' }}>
               <img
                 src="https://res.cloudinary.com/dy089iwsg/image/upload/v1770911779/Front_facing_x8k0fq.jpg"
-                alt="Steven DeBolt"
+                alt="Steven DeBolt professional pool cleaning expert and business owner"
                 style={{
                   width: '100%',
                   borderRadius: '12px',
