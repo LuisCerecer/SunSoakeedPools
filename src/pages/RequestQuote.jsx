@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import Footer from '../components/Footer';
 
+const serviceOptions = [
+  'Weekly Pool Maintenance',
+  'Pool Equipment Repair',
+  'Green Pool Cleanup',
+  'Filter Cleaning',
+  'Salt System Service',
+  'Pool Inspection',
+  'Other'
+];
+
 export default function RequestQuote() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     service: '',
-    message: ''
+    additional: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -22,7 +32,7 @@ export default function RequestQuote() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://n8n.treulogic.work/webhook/38273e17-9028-4812-adeb-5edb9cf041cd', {
+      const response = await fetch('https://tecwave123.app.n8n.cloud/webhook/510bb3dc-9ad6-47ce-8aa0-fbaef79ad2d6', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -30,8 +40,7 @@ export default function RequestQuote() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ name: '', phone: '', service: '', message: '' });
-        setTimeout(() => setSubmitStatus(null), 5000);
+        setFormData({ name: '', phone: '', service: '', additional: '' });
       } else {
         setSubmitStatus('error');
       }
@@ -40,28 +49,6 @@ export default function RequestQuote() {
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  const inputStyle = {
-    width: '100%',
-    padding: '0.875rem 1rem',
-    fontSize: '1rem',
-    border: '2px solid #e5e7eb',
-    borderRadius: '8px',
-    outline: 'none',
-    transition: 'border-color 0.2s, box-shadow 0.2s',
-    fontFamily: "'Montserrat', sans-serif",
-    boxSizing: 'border-box',
-    backgroundColor: '#fff'
-  };
-
-  const labelStyle = {
-    display: 'block',
-    fontSize: '0.95rem',
-    fontWeight: '600',
-    color: '#374151',
-    marginBottom: '0.5rem',
-    fontFamily: "'Montserrat', sans-serif"
   };
 
   return (
@@ -80,130 +67,168 @@ export default function RequestQuote() {
           textAlign: 'center',
           fontFamily: "'Montserrat', sans-serif"
         }}>
-          FREE QUOTE
+          Contact us today for a free consultation
         </h1>
-
-        <p style={{
-          fontSize: '1rem',
-          color: '#6b7280',
-          lineHeight: '1.6',
-          marginBottom: '2rem',
-          textAlign: 'center'
-        }}>
-          Tell us about your pool and get a free quote from our team.
-        </p>
 
         <div style={{
           backgroundColor: '#fff',
           borderRadius: '16px',
-          boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
-          padding: 'clamp(1.5rem, 4vw, 2rem)',
-          border: '1px solid #e0f2f2'
+          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+          padding: 'clamp(1.5rem, 3vw, 2.25rem)'
         }}>
-          <form onSubmit={handleSubmit}>
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={labelStyle}>
-                Name <span style={{ color: '#dc2626' }}>*</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-                style={inputStyle}
-                onFocus={(e) => {
-                  e.target.style.borderColor = '#5dd3d3';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(93, 211, 211, 0.15)';
-                }}
-                onBlur={(e) => {
-                  e.target.style.borderColor = '#e5e7eb';
-                  e.target.style.boxShadow = 'none';
-                }}
-              />
-            </div>
+          <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+              style={{
+                width: '100%',
+                padding: '0.85rem 1rem',
+                fontSize: '0.95rem',
+                border: '1.5px solid #d1d5db',
+                borderRadius: '8px',
+                outline: 'none',
+                transition: 'border-color 0.2s, box-shadow 0.2s',
+                fontFamily: "'Montserrat', sans-serif",
+                boxSizing: 'border-box',
+                backgroundColor: '#f9fafb',
+                color: '#1f2937'
+              }}
+              onFocus={(e) => {
+                e.target.style.borderColor = '#0891b2';
+                e.target.style.boxShadow = '0 0 0 3px rgba(8, 145, 178, 0.12)';
+                e.target.style.backgroundColor = '#fff';
+              }}
+              onBlur={(e) => {
+                e.target.style.borderColor = '#d1d5db';
+                e.target.style.boxShadow = 'none';
+                e.target.style.backgroundColor = '#f9fafb';
+              }}
+            />
 
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={labelStyle}>
-                Phone <span style={{ color: '#dc2626' }}>*</span>
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-                style={inputStyle}
-                onFocus={(e) => {
-                  e.target.style.borderColor = '#5dd3d3';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(93, 211, 211, 0.15)';
-                }}
-                onBlur={(e) => {
-                  e.target.style.borderColor = '#e5e7eb';
-                  e.target.style.boxShadow = 'none';
-                }}
-              />
-            </div>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={handleInputChange}
+              required
+              style={{
+                width: '100%',
+                padding: '0.85rem 1rem',
+                fontSize: '0.95rem',
+                border: '1.5px solid #d1d5db',
+                borderRadius: '8px',
+                outline: 'none',
+                transition: 'border-color 0.2s, box-shadow 0.2s',
+                fontFamily: "'Montserrat', sans-serif",
+                boxSizing: 'border-box',
+                backgroundColor: '#f9fafb',
+                color: '#1f2937'
+              }}
+              onFocus={(e) => {
+                e.target.style.borderColor = '#0891b2';
+                e.target.style.boxShadow = '0 0 0 3px rgba(8, 145, 178, 0.12)';
+                e.target.style.backgroundColor = '#fff';
+              }}
+              onBlur={(e) => {
+                e.target.style.borderColor = '#d1d5db';
+                e.target.style.boxShadow = 'none';
+                e.target.style.backgroundColor = '#f9fafb';
+              }}
+            />
 
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={labelStyle}>
-                Service
-              </label>
-              <input
-                type="text"
+            <div style={{ position: 'relative' }}>
+              <select
                 name="service"
                 value={formData.service}
                 onChange={handleInputChange}
-                placeholder="e.g., Pool Cleaning, Repairs, etc."
-                style={inputStyle}
+                required
+                style={{
+                  width: '100%',
+                  padding: '0.85rem 1rem',
+                  fontSize: '0.95rem',
+                  border: '1.5px solid #d1d5db',
+                  borderRadius: '8px',
+                  outline: 'none',
+                  transition: 'border-color 0.2s, box-shadow 0.2s',
+                  fontFamily: "'Montserrat', sans-serif",
+                  boxSizing: 'border-box',
+                  backgroundColor: '#f9fafb',
+                  color: formData.service ? '#1f2937' : '#9ca3af',
+                  appearance: 'none',
+                  WebkitAppearance: 'none',
+                  cursor: 'pointer',
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 1rem center',
+                  paddingRight: '2.5rem'
+                }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#5dd3d3';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(93, 211, 211, 0.15)';
+                  e.target.style.borderColor = '#0891b2';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(8, 145, 178, 0.12)';
+                  e.target.style.backgroundColor = '#fff';
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = '#e5e7eb';
+                  e.target.style.borderColor = '#d1d5db';
                   e.target.style.boxShadow = 'none';
+                  e.target.style.backgroundColor = '#f9fafb';
                 }}
-              />
+              >
+                <option value="" disabled>Choose Service*</option>
+                {serviceOptions.map(opt => (
+                  <option key={opt} value={opt} style={{ color: '#1f2937' }}>{opt}</option>
+                ))}
+              </select>
             </div>
 
-            <div style={{ marginBottom: '1.5rem' }}>
-              <label style={labelStyle}>
-                Message
-              </label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                rows={4}
-                placeholder="Tell us more about your pool and what you need help with..."
-                style={{
-                  ...inputStyle,
-                  resize: 'vertical',
-                  minHeight: '100px'
-                }}
-                onFocus={(e) => {
-                  e.target.style.borderColor = '#5dd3d3';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(93, 211, 211, 0.15)';
-                }}
-                onBlur={(e) => {
-                  e.target.style.borderColor = '#e5e7eb';
-                  e.target.style.boxShadow = 'none';
-                }}
-              />
-            </div>
+            <textarea
+              name="additional"
+              placeholder="Additional details (optional)"
+              value={formData.additional}
+              onChange={handleInputChange}
+              rows={3}
+              style={{
+                width: '100%',
+                padding: '0.85rem 1rem',
+                fontSize: '0.95rem',
+                border: '1.5px solid #d1d5db',
+                borderRadius: '8px',
+                outline: 'none',
+                transition: 'border-color 0.2s, box-shadow 0.2s',
+                fontFamily: "'Montserrat', sans-serif",
+                boxSizing: 'border-box',
+                backgroundColor: '#f9fafb',
+                color: '#1f2937',
+                resize: 'vertical',
+                minHeight: '80px'
+              }}
+              onFocus={(e) => {
+                e.target.style.borderColor = '#0891b2';
+                e.target.style.boxShadow = '0 0 0 3px rgba(8, 145, 178, 0.12)';
+                e.target.style.backgroundColor = '#fff';
+              }}
+              onBlur={(e) => {
+                e.target.style.borderColor = '#d1d5db';
+                e.target.style.boxShadow = 'none';
+                e.target.style.backgroundColor = '#f9fafb';
+              }}
+            />
 
             {submitStatus === 'success' && (
               <div style={{
                 backgroundColor: '#dcfce7',
                 border: '1px solid #86efac',
                 borderRadius: '8px',
-                padding: '1rem',
-                marginBottom: '1rem',
+                padding: '0.75rem 1rem',
                 color: '#166534',
-                fontSize: '0.95rem'
+                fontSize: '0.9rem',
+                fontFamily: "'Montserrat', sans-serif"
               }}>
-                Thank you! We've received your quote request. We'll be in touch soon!
+                Thank you! We'll get back to you shortly.
               </div>
             )}
 
@@ -212,44 +237,36 @@ export default function RequestQuote() {
                 backgroundColor: '#fef2f2',
                 border: '1px solid #fecaca',
                 borderRadius: '8px',
-                padding: '1rem',
-                marginBottom: '1rem',
+                padding: '0.75rem 1rem',
                 color: '#dc2626',
-                fontSize: '0.95rem'
+                fontSize: '0.9rem',
+                fontFamily: "'Montserrat', sans-serif"
               }}>
-                Something went wrong. Please try again or call us at (949) 736-2671.
+                Something went wrong. Please try again or call us directly.
               </div>
             )}
 
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                style={{
-                  backgroundColor: isSubmitting ? '#9ca3af' : '#5dd3d3',
-                  color: '#1f2937',
-                  fontSize: '1rem',
-                  fontWeight: '700',
-                  padding: '0.875rem 2.5rem',
-                  border: 'none',
-                  borderRadius: '50px',
-                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                  transition: 'all 0.2s',
-                  fontFamily: "'Montserrat', sans-serif",
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem'
-                }}
-              >
-                {isSubmitting ? 'Sending...' : 'Get Your Free Quote'}
-                {!isSubmitting && (
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"/>
-                    <polyline points="12 5 19 12 12 19"/>
-                  </svg>
-                )}
-              </button>
-            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              style={{
+                width: '100%',
+                backgroundColor: isSubmitting ? '#9ca3af' : '#0891b2',
+                color: '#fff',
+                fontSize: '1rem',
+                fontWeight: '700',
+                padding: '0.95rem',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                transition: 'all 0.2s ease',
+                fontFamily: "'Montserrat', sans-serif",
+                letterSpacing: '0.5px',
+                marginTop: '0.25rem'
+              }}
+            >
+              {isSubmitting ? 'Sending...' : 'Request Quote'}
+            </button>
           </form>
         </div>
       </div>
