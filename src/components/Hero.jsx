@@ -150,7 +150,7 @@ export default function Hero() {
               letterSpacing: '-0.02em',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Pool Service in Lake Forest &amp; South Orange County
+              Pool Service in Orange &amp; South Orange County
             </h1>
 
             <p style={{
