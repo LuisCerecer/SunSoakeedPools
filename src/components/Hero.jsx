@@ -10,11 +10,8 @@ const backgroundImages = [
 
 const serviceOptions = [
   'Weekly Pool Maintenance',
-  'Pool Equipment Repair',
-  'Green Pool Cleanup',
-  'Filter Cleaning',
-  'Salt System Service',
-  'Pool Inspection',
+  'Pool inspection',
+  'Pool Repair',
   'Other'
 ];
 
@@ -42,7 +39,20 @@ export default function Hero() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    if (name === 'phone') {
+      const digits = value.replace(/\D/g, '').slice(0, 10);
+      let formatted = digits;
+
+      if (digits.length > 3 && digits.length <= 6) {
+        formatted = `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+      } else if (digits.length > 6) {
+        formatted = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+      }
+
+      setFormData(prev => ({ ...prev, phone: formatted }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -51,10 +61,18 @@ export default function Hero() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('https://tecwave123.app.n8n.cloud/webhook/510bb3dc-9ad6-47ce-8aa0-fbaef79ad2d6', {
+      const payload = {
+        Name: formData.name,
+        Number: formData.phone,
+        Email: '',
+        Message: formData.additional,
+        Service: formData.service || ''
+      };
+
+      const response = await fetch('https://n8n.treulogic.work/webhook/38273e17-9028-4812-adeb-5edb9cf041cd', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(payload)
       });
 
       if (response.ok) {
