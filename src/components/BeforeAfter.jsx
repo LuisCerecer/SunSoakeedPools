@@ -50,34 +50,6 @@ function BeforeAfterCard({ image, id }) {
           objectFit: 'cover'
         }}
       />
-      <div style={{
-        position: 'absolute',
-        top: '1rem',
-        left: '1rem',
-        backgroundColor: '#1f2937',
-        color: '#fff',
-        padding: '0.375rem 0.875rem',
-        borderRadius: '20px',
-        fontSize: '0.75rem',
-        fontWeight: '600',
-        fontFamily: "'Montserrat', sans-serif"
-      }}>
-        Before
-      </div>
-      <div style={{
-        position: 'absolute',
-        top: '1rem',
-        right: '1rem',
-        backgroundColor: '#5dd3d3',
-        color: '#1f2937',
-        padding: '0.375rem 0.875rem',
-        borderRadius: '20px',
-        fontSize: '0.75rem',
-        fontWeight: '600',
-        fontFamily: "'Montserrat', sans-serif"
-      }}>
-        After
-      </div>
     </div>
   );
 }

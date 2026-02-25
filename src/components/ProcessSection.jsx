@@ -59,31 +59,31 @@ export default function ProcessSection() {
           Our simple 4-step process to pool perfection
         </p>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '2rem',
-          marginBottom: '3.5rem',
-          position: 'relative'
+        <div className="process-container" style={{
+          position: 'relative',
+          marginBottom: '3.5rem'
         }}>
           <style>{`
-            @media (min-width: 768px) {
-              .process-grid-wrapper {
-                position: relative;
-              }
-              .process-grid-wrapper::before {
+            @media (min-width: 1024px) {
+              .process-container::before {
                 content: '';
                 position: absolute;
-                top: 100px;
-                left: 0;
-                right: 0;
+                top: 28px;
+                left: 10%;
+                right: 10%;
                 height: 2px;
-                background: linear-gradient(to right, transparent, #5dd3d3 10%, #5dd3d3 90%, transparent);
+                background: linear-gradient(to right, transparent, #5dd3d3 15%, #5dd3d3 85%, transparent);
                 z-index: 0;
               }
             }
           `}</style>
-          <div className="process-grid-wrapper" style={{ display: 'contents' }}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+            gap: '2rem',
+            position: 'relative',
+            zIndex: 1
+          }}>
             {processSteps.map((step, index) => (
               <ProcessCard key={index} step={step} />
             ))}
