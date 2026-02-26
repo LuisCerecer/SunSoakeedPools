@@ -206,7 +206,7 @@ export default function Hero() {
               maxWidth: '540px',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Consistent weekly care that keeps your pool looking beautiful.
+              Swimming Pool Repair Service, Swimming Pool Contractor, Filter cleaning, Water treatment, Vacuuming, pH Balancing
               <br />
               Every visit includes proper skimming, brushing, and balanced chemistry.
             </p>
