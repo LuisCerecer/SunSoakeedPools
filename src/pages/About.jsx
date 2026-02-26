@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigation } from '../App';
+import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import ContactFormSection from '../components/ContactFormSection';
 
@@ -30,7 +30,7 @@ A simple philosophy: maintain it like it’s our own, so it stays ready for fami
 ];
 
 export default function About() {
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -334,7 +334,7 @@ export default function About() {
             </a>
 
             <button
-              onClick={() => navigate('contactus')}
+              onClick={() => navigate('/Contact')}
               style={{
                 backgroundColor: 'transparent',
                 color: '#1f2937',

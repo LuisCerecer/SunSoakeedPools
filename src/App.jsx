@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from './components/Header';
@@ -9,43 +10,20 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import RequestQuote from './pages/RequestQuote';
 
-const NavigationContext = createContext();
-
-export function useNavigation() {
-  return useContext(NavigationContext);
-}
-
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  const navigate = (page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'about':
-        return <About />;
-      case 'process':
-        return <Process />;
-      case 'services':
-        return <Services />;
-      case 'contact':
-        return <Contact />;
-      case 'contactus':
-        return <RequestQuote />;
-      default:
-        return <Home />;
-    }
-  };
-
   return (
-    <NavigationContext.Provider value={{ currentPage, navigate }}>
+    <BrowserRouter>
       <Header />
-      {renderPage()}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Process" element={<Process />} />
+        <Route path="/Services" element={<Services />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Quote" element={<RequestQuote />} />
+      </Routes>
       {import.meta.env.PROD && <Analytics />}
       {import.meta.env.PROD && <SpeedInsights />}
-    </NavigationContext.Provider>
+    </BrowserRouter>
   );
 }

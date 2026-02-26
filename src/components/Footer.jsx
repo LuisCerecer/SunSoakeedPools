@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigation } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
 
-  const handleNavClick = (page) => {
-    navigate(page);
+  const handleNavClick = (path) => {
+    navigate(path);
     window.scrollTo(0, 0);
   };
 
@@ -140,11 +140,11 @@ export default function Footer() {
             flexDirection: 'column',
             gap: '0.75rem'
           }}>
-            <FooterLink onClick={() => handleNavClick('home')}>Home</FooterLink>
-            <FooterLink onClick={() => handleNavClick('about')}>About</FooterLink>
-            <FooterLink onClick={() => handleNavClick('process')}>Process</FooterLink>
-            <FooterLink onClick={() => handleNavClick('contact')}>Contact</FooterLink>
-            <FooterLink onClick={() => handleNavClick('contactus')}>Free Quote</FooterLink>
+            <FooterLink onClick={() => handleNavClick('/')}>Home</FooterLink>
+            <FooterLink onClick={() => handleNavClick('/About')}>About</FooterLink>
+            <FooterLink onClick={() => handleNavClick('/Process')}>Process</FooterLink>
+            <FooterLink onClick={() => handleNavClick('/Contact')}>Contact</FooterLink>
+            <FooterLink onClick={() => handleNavClick('/Contact')}>Free Quote</FooterLink>
           </nav>
         </div>
       </div>

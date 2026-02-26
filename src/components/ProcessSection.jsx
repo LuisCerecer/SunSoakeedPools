@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigation } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 const processSteps = [
   {
@@ -29,7 +29,7 @@ const processSteps = [
 ];
 
 export default function ProcessSection() {
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
   return (
     <section style={{
       padding: '5rem 1.5rem',
@@ -132,7 +132,7 @@ export default function ProcessSection() {
           </a>
 
           <button
-            onClick={() => navigate('contactus')}
+            onClick={() => navigate('/Contact')}
             style={{
               backgroundColor: 'transparent',
               color: '#1f2937',

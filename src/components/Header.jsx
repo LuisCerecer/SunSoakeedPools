@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigation } from '../App';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Header() {
-  const { currentPage, navigate } = useNavigation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -15,13 +16,13 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (page) => {
-    navigate(page);
+  const handleNavClick = (path) => {
+    navigate(path);
     setMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-
-  const isNonHomePage = currentPage !== 'home';
+  const isNonHomePage = currentPath !== '/';
   const shouldHaveColor = isNonHomePage || scrolled;
 
   return (
@@ -45,7 +46,7 @@ export default function Header() {
           alignItems: 'center'
         }}>
           <button
-            onClick={() => handleNavClick('home')}
+            onClick={() => handleNavClick('/')}
             style={{
               background: 'none',
               border: 'none',
@@ -87,10 +88,10 @@ export default function Header() {
             alignItems: 'center'
           }}
             className="desktop-nav">
-            <NavButton page="home" label="HOME" currentPage={currentPage} onClick={handleNavClick} />
-            <NavButton page="about" label="ABOUT" currentPage={currentPage} onClick={handleNavClick} />
-            <NavButton page="services" label="SERVICES" currentPage={currentPage} onClick={handleNavClick} />
-            <NavButton page="process" label="PROCESS" currentPage={currentPage} onClick={handleNavClick} />
+            <NavButton path="/" label="HOME" currentPath={currentPath} onClick={handleNavClick} />
+            <NavButton path="/About" label="ABOUT" currentPath={currentPath} onClick={handleNavClick} />
+            <NavButton path="/Services" label="SERVICES" currentPath={currentPath} onClick={handleNavClick} />
+            <NavButton path="/Process" label="PROCESS" currentPath={currentPath} onClick={handleNavClick} />
             <a
               href="tel:+19497362671"
               style={{
@@ -110,7 +111,7 @@ export default function Header() {
               (949) 736-2671
             </a>
             <button
-              onClick={() => handleNavClick('contactus')}
+              onClick={() => handleNavClick('/Contact')}
               style={{
                 backgroundColor: '#5dd3d3',
                 color: '#1f2937',
@@ -141,10 +142,10 @@ export default function Header() {
             marginTop: '1rem'
           }}
             className="mobile-nav">
-            <MobileNavButton page="home" label="HOME" currentPage={currentPage} onClick={handleNavClick} />
-            <MobileNavButton page="about" label="ABOUT" currentPage={currentPage} onClick={handleNavClick} />
-            <MobileNavButton page="services" label="SERVICES" currentPage={currentPage} onClick={handleNavClick} />
-            <MobileNavButton page="process" label="PROCESS" currentPage={currentPage} onClick={handleNavClick} />
+            <MobileNavButton path="/" label="HOME" currentPath={currentPath} onClick={handleNavClick} />
+            <MobileNavButton path="/About" label="ABOUT" currentPath={currentPath} onClick={handleNavClick} />
+            <MobileNavButton path="/Services" label="SERVICES" currentPath={currentPath} onClick={handleNavClick} />
+            <MobileNavButton path="/Process" label="PROCESS" currentPath={currentPath} onClick={handleNavClick} />
             <a
               href="tel:+19497362671"
               style={{
@@ -161,7 +162,7 @@ export default function Header() {
               (949) 736-2671
             </a>
             <button
-              onClick={() => handleNavClick('contactus')}
+              onClick={() => handleNavClick('/Contact')}
               style={{
                 backgroundColor: '#5dd3d3',
                 color: '#1f2937',
@@ -182,16 +183,15 @@ export default function Header() {
           </nav>
         )}
       </header>
-
     </>
   );
 }
 
-function NavButton({ page, label, currentPage, onClick }) {
-  const isActive = currentPage === page;
+function NavButton({ path, label, currentPath, onClick }) {
+  const isActive = currentPath === path;
   return (
     <button
-      onClick={() => onClick(page)}
+      onClick={() => onClick(path)}
       style={{
         color: isActive ? '#5dd3d3' : '#fff',
         textDecoration: 'none',
@@ -211,11 +211,11 @@ function NavButton({ page, label, currentPage, onClick }) {
   );
 }
 
-function MobileNavButton({ page, label, currentPage, onClick }) {
-  const isActive = currentPage === page;
+function MobileNavButton({ path, label, currentPath, onClick }) {
+  const isActive = currentPath === path;
   return (
     <button
-      onClick={() => onClick(page)}
+      onClick={() => onClick(path)}
       style={{
         color: isActive ? '#5dd3d3' : '#fff',
         textDecoration: 'none',

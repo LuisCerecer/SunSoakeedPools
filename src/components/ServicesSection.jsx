@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigation } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 const services = [
   {
@@ -73,7 +73,7 @@ function ServiceCard({ title, image }) {
 }
 
 export default function ServicesSection() {
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
   return (
     <section id="services" style={{
       padding: '5rem 2rem',
@@ -155,7 +155,7 @@ export default function ServicesSection() {
           </a>
 
           <button
-            onClick={() => navigate('contactus')}
+            onClick={() => navigate('/Contact')}
             style={{
               backgroundColor: 'transparent',
               color: '#1f2937',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigation } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 const reviews = [
   {
@@ -23,7 +23,7 @@ const reviews = [
 ];
 
 export default function Reviews() {
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
   return (
     <section style={{
       padding: '5rem 1.5rem',
@@ -106,7 +106,7 @@ export default function Reviews() {
           </a>
 
           <button
-            onClick={() => navigate('contactus')}
+            onClick={() => navigate('/Contact')}
             style={{
               backgroundColor: 'transparent',
               color: '#1f2937',

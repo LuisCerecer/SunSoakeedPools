@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigation } from '../App';
+import { useNavigate } from 'react-router-dom';
 
 const backgroundImages = [
   '/phillipe_after.jpeg',
@@ -16,7 +16,7 @@ const serviceOptions = [
 ];
 
 export default function Hero() {
-  const { navigate } = useNavigation();
+  const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
@@ -245,7 +245,7 @@ export default function Hero() {
 
               {/* Secondary CTA — Get a Free Quote */}
               <button
-                onClick={() => navigate('contactus')}
+                onClick={() => navigate('/Contact')}
                 style={{
                   backgroundColor: 'transparent',
                   color: '#fff',
