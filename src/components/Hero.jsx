@@ -194,7 +194,7 @@ export default function Hero() {
               letterSpacing: '-0.02em',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Pool Service in Orange &amp; South Orange County
+              Pool Cleaning Services Orange, California
             </h1>
 
             <p style={{
