@@ -86,7 +86,7 @@ export default function ContactFormSection() {
 
   return (
     <section style={{
-      padding: '5rem 1.5rem',
+      padding: '8rem 1.5rem 5rem',
       backgroundColor: '#f8fafc'
     }}>
       <div style={{
