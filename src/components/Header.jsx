@@ -58,7 +58,7 @@ export default function Header() {
           >
             <img
               src="/image.png"
-              alt="Logo"
+              alt="OC Sun Soaked Pool Service logo"
               style={{
                 height: '70px',
                 width: 'auto'

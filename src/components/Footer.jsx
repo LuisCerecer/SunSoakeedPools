@@ -29,7 +29,7 @@ export default function Footer() {
         <div style={{ flex: '0 0 auto', maxWidth: '200px' }}>
           <img
             src="/image.png"
-            alt="Logo"
+            alt="OC Sun Soaked Pool Service logo"
             style={{
               maxHeight: '80px',
               width: 'auto',

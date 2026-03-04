@@ -1,4 +1,4 @@
-# Technical SEO Audit — OC Sun Soaked Pools
+# Technical SEO Audit — OC Sun Soaked Pool Service
 
 **Domain:** ocsunsoakedpools.com
 **Primary keyword target:** Pool Cleaning Services Orange California
@@ -35,17 +35,17 @@ Positive elements: semantic `<section>` usage, a single `<h1>` on the homepage, 
 ### Per-Page Meta Tags
 
 - [ ] **Install `react-helmet-async` (or equivalent) and add unique `<title>`, `<meta name="description">`, `<link rel="canonical">`, and OG tags for every route.** Currently all pages share one set of meta tags from `index.html`. Each page needs:
-  - `/` — Pool Cleaning Services Orange, CA | OC Sun Soaked Pools
-  - `/About` — About OC Sun Soaked Pools | Pool Cleaning Orange County
-  - `/Services` — Pool Cleaning & Maintenance Services | OC Sun Soaked Pools
-  - `/Process` — Our Pool Cleaning Process | OC Sun Soaked Pools
-  - `/Contact` — Contact OC Sun Soaked Pools | Free Pool Cleaning Quote
-  - `/Quote` — Request a Free Pool Cleaning Quote | OC Sun Soaked Pools
+  - `/` — Pool Cleaning Services Orange, CA | OC Sun Soaked Pool Service
+  - `/About` — About OC Sun Soaked Pool Service | Pool Cleaning Orange County
+  - `/Services` — Pool Cleaning & Maintenance Services | OC Sun Soaked Pool Service
+  - `/Process` — Our Pool Cleaning Process | OC Sun Soaked Pool Service
+  - `/Contact` — Contact OC Sun Soaked Pool Service | Free Pool Cleaning Quote
+  - `/Quote` — Request a Free Pool Cleaning Quote | OC Sun Soaked Pool Service
   - **Impact:** Critical — without unique meta, only the homepage can rank
   - **Difficulty:** Medium — requires adding a dependency and updating each page
 
 - [ ] **Fix the homepage title tag.** Current title is ~210 characters and keyword-stuffed. Replace with a concise, natural title under 60 characters.
-  - Recommended: `Pool Cleaning Services Orange, CA | OC Sun Soaked Pools`
+  - Recommended: `Pool Cleaning Services Orange, CA | OC Sun Soaked Pool Service`
   - **Impact:** High — keyword stuffing can trigger quality demotion
   - **Difficulty:** Low
 
@@ -107,7 +107,7 @@ Positive elements: semantic `<section>` usage, a single `<h1>` on the homepage, 
 
 ### Image Optimization
 
-- [ ] **Replace generic "Logo" alt text** on all logo images with "OC Sun Soaked Pools logo". Affected files: `Header.jsx`, `Footer.jsx`, `ContactFormSection.jsx`, `Contact.jsx`.
+- [ ] **Replace generic "Logo" alt text** on all logo images with "OC Sun Soaked Pool Service logo". Affected files: `Header.jsx`, `Footer.jsx`, `ContactFormSection.jsx`, `Contact.jsx`.
   - **Impact:** Medium
   - **Difficulty:** Low
 

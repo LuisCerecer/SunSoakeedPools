@@ -133,7 +133,7 @@ export default function ContactFormSection() {
             }}>
               <img
                 src="/image.png"
-                alt="Logo"
+                alt="OC Sun Soaked Pool Service logo"
                 style={{
                   height: '45px',
                   width: 'auto',

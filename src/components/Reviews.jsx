@@ -11,7 +11,7 @@ const reviews = [
   {
     name: "Martin V.",
     initial: "M",
-    text: "I've used this company for the past year and their service has been exceptional. Their new software keeps me updated on weekly visits and includes data on work completion and current chemical percentages/levels. They have fair pricing and a very responsive staff. If looking for a new pool cleaning service, l definitely recommend OC Sun Soaked Pool service.",
+    text: "I've used this company for the past year and their service has been exceptional. Their new software keeps me updated on weekly visits and includes data on work completion and current chemical percentages/levels. They have fair pricing and a very responsive staff. If looking for a new pool cleaning service, l definitely recommend OC Sun Soaked Pool Service.",
     avatarColor: "#1f2937"
   },
   {

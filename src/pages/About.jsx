@@ -6,7 +6,7 @@ import ContactFormSection from '../components/ContactFormSection';
 const faqData = [
   {
     question: "How much expertise do you have?",
-    answer: `OCSunSoakedPools is owner-operated by Steven DeBolt who has multiple years of experience under his belt, he is an expert on:
+    answer: `OC Sun Soaked Pool Service is owner-operated by Steven DeBolt who has multiple years of experience under his belt, he is an expert on:
 Debris control (surface + bottom) using the right tools for the week (coarse net / fine net / vacuum as needed)
 Water chemistry (chlorine + pH + alkalinity + salt + phosphates + TDS)
 Equipment awareness (spotting common issues early)
@@ -98,7 +98,7 @@ export default function About() {
                 marginBottom: '1.5rem',
                 fontFamily: "'Montserrat', sans-serif"
               }}>
-                Hello, I’m Steven DeBolt, owner of OC Sun Soaked Pools. I’m a South Orange County local (Laguna Hills) who has always loved the way water changes a space—whether that’s a backyard pool or a day at the beach. For me, pools aren’t just “maintenance.” They’re where families make regular memories, and where a clean, cared-for backyard can feel calm and put together even when life is busy.
+                Hello, I’m Steven DeBolt, owner of OC Sun Soaked Pool Service. I’m a South Orange County local (Laguna Hills) who has always loved the way water changes a space—whether that’s a backyard pool or a day at the beach. For me, pools aren’t just “maintenance.” They’re where families make regular memories, and where a clean, cared-for backyard can feel calm and put together even when life is busy.
               </p>
               <p style={{
                 fontSize: '1.125rem',
@@ -111,7 +111,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Block 2: What OC Sun Soaked Pools stands for */}
+          {/* Block 2: What OC Sun Soaked Pool Service stands for */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
@@ -128,7 +128,7 @@ export default function About() {
                 marginBottom: '1.5rem',
                 fontFamily: "'Montserrat', sans-serif"
               }}>
-                What OC Sun Soaked Pools stands for
+                What OC Sun Soaked Pool Service stands for
               </h2>
               <p style={{
                 fontSize: '1.125rem',
@@ -151,7 +151,7 @@ export default function About() {
             <div style={{ flex: '1 1 400px' }}>
               <img
                 src="https://res.cloudinary.com/dy089iwsg/image/upload/v1770911777/Logo_on_the_back_ln3kbz.jpg"
-                alt="OC Sun Soaked Pools Team"
+                alt="OC Sun Soaked Pool Service Team"
                 style={{
                   width: '100%',
                   borderRadius: '12px',
