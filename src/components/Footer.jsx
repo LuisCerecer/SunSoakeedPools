@@ -87,7 +87,7 @@ export default function Footer() {
         {/* 4. Map (Expanded) */}
         <div style={{ flex: '1 1 300px', minWidth: '300px', maxWidth: '420px', height: '200px', borderRadius: '8px', overflow: 'hidden' }}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.9878211701475!2d-117.78328720684829!3d33.72813093258166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdc8190ccb9bf%3A0x2de26fc97b169977!2s532%20Marketview%2C%20Irvine%2C%20CA%2092602!5e1!3m2!1sen!2sus!4v1770856397841!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.2550028393084!2d-117.78212662429738!3d33.72822157328074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdc8190ccb9bf%3A0x2de26fc97b169977!2s532%20Marketview%2C%20Irvine%2C%20CA%2092602!5e0!3m2!1sen!2sus!4v1772638587503!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}
