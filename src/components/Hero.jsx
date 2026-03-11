@@ -194,7 +194,7 @@ export default function Hero() {
               letterSpacing: '-0.02em',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Pool Cleaning Orange, California
+              Perfectionist Pool Care Serving Tustin
             </h1>
 
               <h2 style={{
