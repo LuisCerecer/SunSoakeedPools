@@ -218,9 +218,7 @@ export default function Hero() {
               maxWidth: '540px',
               fontFamily: "'Montserrat', sans-serif"
             }}>
-              Consistent weekly care that keeps your pool looking beautiful.
-              <br />
-              Every visit includes proper skimming, brushing, and balanced chemistry.
+              Consistent weekly care that keeps your pool beautiful. Every visit includes skimming, brushing, chemistry testing, and professional water balancing.
             </p>
 
             <div style={{
