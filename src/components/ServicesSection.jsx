@@ -106,11 +106,30 @@ export default function ServicesSection() {
         <div className="services-bottom-row" style={{
           display: 'grid',
           gridTemplateColumns: '1fr',
-          marginBottom: '3.5rem'
+          marginBottom: '2.5rem'
         }}>
           <div className="services-bottom-card" style={{ width: '100%' }}>
             <ServiceCard title={services[2].title} image={services[2].image} />
           </div>
+        </div>
+
+        <div className="services-copy" style={{
+          padding: '2rem',
+          backgroundColor: '#ffffff',
+          borderRadius: '12px',
+          border: '1px solid #e2e8f0',
+          textAlign: 'center',
+          marginBottom: '3rem'
+        }}>
+          <p style={{
+            fontSize: 'clamp(1rem, 2vw, 1.125rem)',
+            lineHeight: '1.6',
+            color: '#475569',
+            margin: '0',
+            fontWeight: '500'
+          }}>
+            Consistent weekly care that keeps your pool beautiful. Every visit includes skimming, brushing, chemistry testing, and professional water balancing.
+          </p>
         </div>
 
         <div style={{
@@ -204,6 +223,10 @@ export default function ServicesSection() {
           .services-bottom-card {
             width: 100% !important;
             max-width: none !important;
+          }
+          .services-copy {
+            padding: 1.5rem !important;
+            margin-bottom: 2rem !important;
           }
         }
       `}</style>
