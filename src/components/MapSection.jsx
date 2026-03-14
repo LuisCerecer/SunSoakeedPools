@@ -25,7 +25,7 @@ export default function MapSection() {
           marginBottom: '2rem',
           fontFamily: "'Montserrat', sans-serif"
         }}>
-          Proudly serving Orange County and surrounding cities
+          Proudly serving Tustin and surrounding cities
         </h2>
 
         <div style={{
