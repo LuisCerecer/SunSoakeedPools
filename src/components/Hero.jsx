@@ -186,50 +186,40 @@ export default function Hero() {
             </div>
 
             <h1 style={{
-              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
+              fontSize: 'clamp(2.25rem, 5vw, 3.5rem)',
               fontWeight: '700',
               color: '#fff',
-              marginBottom: '1.25rem',
-              lineHeight: '1.12',
-              letterSpacing: '-0.02em',
+              marginBottom: '1rem',
+              lineHeight: '1.15',
+              letterSpacing: '-0.01em',
               fontFamily: "'Montserrat', sans-serif",
-              textShadow: '2px 2px 8px rgba(0, 0, 0, 0.4)'
+              textShadow: '0 2px 12px rgba(0, 0, 0, 0.5)'
             }}>
               Perfectionist Pool Care Serving Tustin
             </h1>
 
             <h2 style={{
-              fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-              fontWeight: '500',
-              color: 'rgba(93, 211, 211, 0.95)',
-              marginBottom: '1.75rem',
-              lineHeight: '1.6',
-              letterSpacing: '0.01em',
+              fontSize: 'clamp(1rem, 2.2vw, 1.25rem)',
+              fontWeight: '400',
+              color: 'rgba(255, 255, 255, 0.95)',
+              marginBottom: '1.5rem',
+              lineHeight: '1.5',
               fontFamily: "'Montserrat', sans-serif",
-              display: 'inline-block',
-              padding: '0.75rem 1.25rem',
-              backgroundColor: 'rgba(15, 23, 42, 0.6)',
-              borderRadius: '8px',
-              border: '1px solid rgba(93, 211, 211, 0.3)',
-              backdropFilter: 'blur(8px)',
-              maxWidth: '580px'
+              maxWidth: '620px',
+              textShadow: '0 1px 8px rgba(0, 0, 0, 0.5)'
             }}>
               Swimming pool repair service • Swimming pool contractor • Filter cleaning • Water treatment • Vacuuming • pH Balancing
             </h2>
 
             <h3 style={{
-              fontSize: 'clamp(1.05rem, 2.5vw, 1.2rem)',
+              fontSize: 'clamp(1.1rem, 2.5vw, 1.35rem)',
               color: '#fff',
-              lineHeight: '1.7',
+              lineHeight: '1.6',
               marginBottom: '2.5rem',
               fontWeight: '400',
-              maxWidth: '540px',
+              maxWidth: '560px',
               fontFamily: "'Montserrat', sans-serif",
-              paddingLeft: '1rem',
-              borderLeft: '4px solid #5dd3d3',
-              backgroundColor: 'rgba(93, 211, 211, 0.1)',
-              padding: '1rem 1.25rem',
-              borderRadius: '6px'
+              textShadow: '0 1px 8px rgba(0, 0, 0, 0.5)'
             }}>
               Weekly service for homeowners who want their pool maintained right — crystal clear water, balanced chemistry, and attention to detail every visit.
             </h3>
