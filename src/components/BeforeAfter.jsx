@@ -92,24 +92,6 @@ export default function BeforeAfter() {
           ))}
         </div>
 
-        <div className="before-after-copy" style={{
-          marginTop: '3rem',
-          padding: '2rem',
-          backgroundColor: '#ffffff',
-          borderRadius: '12px',
-          border: '1px solid #e2e8f0',
-          textAlign: 'center'
-        }}>
-          <p style={{
-            fontSize: 'clamp(1rem, 2vw, 1.125rem)',
-            lineHeight: '1.6',
-            color: '#475569',
-            margin: '0',
-            fontWeight: '500'
-          }}>
-            Consistent weekly care that keeps your pool beautiful. Every visit includes skimming, brushing, chemistry testing, and professional water balancing.
-          </p>
-        </div>
       </div>
 
       <style>{`

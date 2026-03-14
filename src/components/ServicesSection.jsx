@@ -7,10 +7,6 @@ const services = [
     image: 'https://res.cloudinary.com/dy089iwsg/image/upload/v1769529407/IMG_3211-2_1_fbsaoe.jpg'
   },
   {
-    title: 'Weekly Pool Maintenance',
-    image: 'https://res.cloudinary.com/dy089iwsg/image/upload/v1769529534/IMG_6905_yuxdxl.jpg'
-  },
-  {
     title: 'Filter Cleaning',
     image: 'https://res.cloudinary.com/dy089iwsg/image/upload/v1772056642/IMG_2731_fqelqo.jpg'
   }
@@ -101,16 +97,6 @@ export default function ServicesSection() {
         }}>
           <ServiceCard title={services[0].title} image={services[0].image} />
           <ServiceCard title={services[1].title} image={services[1].image} />
-        </div>
-
-        <div className="services-bottom-row" style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          marginBottom: '2.5rem'
-        }}>
-          <div className="services-bottom-card" style={{ width: '100%' }}>
-            <ServiceCard title={services[2].title} image={services[2].image} />
-          </div>
         </div>
 
         <div className="services-copy" style={{
