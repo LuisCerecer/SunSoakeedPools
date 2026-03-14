@@ -189,37 +189,50 @@ export default function Hero() {
               fontSize: 'clamp(2rem, 5vw, 3.25rem)',
               fontWeight: '700',
               color: '#fff',
-              marginBottom: '1.5rem',
+              marginBottom: '1.25rem',
               lineHeight: '1.12',
               letterSpacing: '-0.02em',
-              fontFamily: "'Montserrat', sans-serif"
+              fontFamily: "'Montserrat', sans-serif",
+              textShadow: '2px 2px 8px rgba(0, 0, 0, 0.4)'
             }}>
               Perfectionist Pool Care Serving Tustin
             </h1>
 
-              <h2 style={{
-              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
-              fontWeight: '700',
-              color: '#fff',
-              marginBottom: '1.5rem',
-              lineHeight: '1.12',
-              letterSpacing: '-0.02em',
-              fontFamily: "'Montserrat', sans-serif"
+            <h2 style={{
+              fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
+              fontWeight: '500',
+              color: 'rgba(93, 211, 211, 0.95)',
+              marginBottom: '1.75rem',
+              lineHeight: '1.6',
+              letterSpacing: '0.01em',
+              fontFamily: "'Montserrat', sans-serif",
+              display: 'inline-block',
+              padding: '0.75rem 1.25rem',
+              backgroundColor: 'rgba(15, 23, 42, 0.6)',
+              borderRadius: '8px',
+              border: '1px solid rgba(93, 211, 211, 0.3)',
+              backdropFilter: 'blur(8px)',
+              maxWidth: '580px'
             }}>
               Swimming pool repair service • Swimming pool contractor • Filter cleaning • Water treatment • Vacuuming • pH Balancing
             </h2>
 
-            <p style={{
-              fontSize: 'clamp(1rem, 2.5vw, 1.15rem)',
-              color: 'rgba(255, 255, 255, 0.9)',
+            <h3 style={{
+              fontSize: 'clamp(1.05rem, 2.5vw, 1.2rem)',
+              color: '#fff',
               lineHeight: '1.7',
               marginBottom: '2.5rem',
               fontWeight: '400',
               maxWidth: '540px',
-              fontFamily: "'Montserrat', sans-serif"
+              fontFamily: "'Montserrat', sans-serif",
+              paddingLeft: '1rem',
+              borderLeft: '4px solid #5dd3d3',
+              backgroundColor: 'rgba(93, 211, 211, 0.1)',
+              padding: '1rem 1.25rem',
+              borderRadius: '6px'
             }}>
               Weekly service for homeowners who want their pool maintained right — crystal clear water, balanced chemistry, and attention to detail every visit.
-            </p>
+            </h3>
 
             <div style={{
               display: 'flex',
