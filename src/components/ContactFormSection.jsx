@@ -36,11 +36,11 @@ export default function ContactFormSection() {
 
     try {
       const payload = {
-        Name: formData.name,
-        Number: formData.phone,
-        Email: formData.email,
-        Message: formData.message,
-        Service: ''
+        name: formData.name || '',
+        email: formData.email || '',
+        phone: formData.phone || '',
+        service: '',
+        message: formData.message || ''
       };
 
       const response = await fetch('https://n8n.treulogic.work/webhook/38273e17-9028-4812-adeb-5edb9cf041cd', {

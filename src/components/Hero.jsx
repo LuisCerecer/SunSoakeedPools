@@ -62,11 +62,11 @@ export default function Hero() {
 
     try {
       const payload = {
-        Name: formData.name,
-        Number: formData.phone,
-        Email: '',
-        Message: formData.additional,
-        Service: formData.service || ''
+        name: formData.name || '',
+        email: '',
+        phone: formData.phone || '',
+        service: formData.service || '',
+        message: formData.additional || ''
       };
 
       const response = await fetch('https://n8n.treulogic.work/webhook/38273e17-9028-4812-adeb-5edb9cf041cd', {
