@@ -180,14 +180,14 @@ export default function Contact() {
                       Phone Number
                     </div>
                     <a
-                      href="tel:9497362671"
+                      href="tel:7148437946"
                       style={{
                         fontSize: '0.95rem',
                         color: '#5dd3d3',
                         textDecoration: 'none'
                       }}
                     >
-                      (949) 736-2671
+                      (714) 843-7946
                     </a>
                   </div>
                 </div>
@@ -219,14 +219,14 @@ export default function Contact() {
                       Email
                     </div>
                     <a
-                      href="mailto:steven@ocsunsoakedpools.com"
+                      href="mailto:Tony@domynex.com"
                       style={{
                         fontSize: '0.95rem',
                         color: '#5dd3d3',
                         textDecoration: 'none'
                       }}
                     >
-                      steven@ocsunsoakedpools.com
+                      Tony@domynex.com
                     </a>
                   </div>
                 </div>

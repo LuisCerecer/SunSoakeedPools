@@ -71,7 +71,7 @@ export default function Footer() {
             PHONE
           </h3>
           <a
-            href="tel:9497362671"
+            href="tel:7148437946"
             style={{
               fontSize: '1rem',
               color: '#d1d5db',
@@ -80,7 +80,7 @@ export default function Footer() {
               whiteSpace: 'nowrap'
             }}
           >
-            (949) 736-2671
+            (714) 843-7946
           </a>
         </div>
 
